@@ -43,6 +43,122 @@
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 )
 
+(cd (getenv "HOME"))
+
+(defun dj/org-agenda-with-tip (arg)
+  "Show agenda for ARG days."
+  (org-agenda-list arg)
+  (let ((inhibit-read-only t)
+	(pos (point)))
+    (goto-char (point-max))
+    (goto-char pos)))
+
+(defun dj/kill-this-buffer ()
+  "Kill the current buffer"
+  (interactive)
+  (kill-buffer (current-buffer)))
+
+(bind-keys
+ ("C-x C-k" . dj/kill-this-buffer))
+
+(defun dj/change-frame-font-size (fn)
+  "Change the frame font size according to function FN."
+  (let* ((font-name (frame-parameter nil 'font))
+     (decomposed-font-name (x-decompose-font-name font-name))
+     (font-size (string-to-number (aref decomposed-font-name 5))))
+    (aset decomposed-font-name 5 (int-to-string (funcall fn font-size)))
+    (set-frame-font (x-compose-font-name decomposed-font-name))))
+
+(defun dj/frame-text-scale-increase ()
+  "Increase the frame font size by 1."
+  (interactive)
+  (dj/change-frame-font-size '1+))
+
+(defun dj/frame-text-scale-decrease ()
+  "Decrease the frame font size by 1."
+  (interactive)
+  (dj/change-frame-font-size '1-))
+
+(bind-keys
+ ("C-+" . text-scale-increase)
+ ("C--" . text-scale-decrease)
+ ("s--" . dj/frame-text-scale-decrease)
+ ("s-+" . dj/frame-text-scale-increase)
+ ("s-=" . dj/frame-text-scale-increase))
+
+(use-package ring
+  :commands (dj/transparency-apply dj/transparency-next dj/transparency-previous
+		    dj/transparency-cycle dj/transparency-add)
+  :config
+  (setq dj/transparency-ring
+    (ring-convert-sequence-to-ring (list '(100 100) '(100 50) '(100 10) '(95 50) '(90 50) '(85 50)))
+    dj/transparency
+    (ring-ref dj/transparency-ring 0))
+
+  (defun dj/transparency-apply (trans)
+    "Apply the TRANS alpha value to the frame."
+    (set-frame-parameter (selected-frame) 'alpha (setq dj/transparency trans)))
+
+  (defun dj/transparency-next ()
+    "Apply the next transparency value in the ring `dj/transparency-ring`."
+    (interactive)
+    (dj/transparency-apply (ring-next dj/transparency-ring dj/transparency)))
+
+  (defun dj/transparency-previous ()
+    "Apply the previous transparency value in the ring `dj/transparency-ring`."
+    (interactive)
+    (dj/transparency-apply (ring-previous dj/transparency-ring dj/transparency)))
+
+  (defun dj/transparency-cycle ()
+    "Cycle to the next transparency setting."
+    (interactive)
+    (dj/transparency-next))
+
+  (defun dj/transparency-add (active inactive)
+    "Add ACTIVE and INACTIVE transparency values to the ring."
+    (interactive "nActive Transparency:\nnInactive Transparency:")
+    (ring-insert+extend dj/transparency-ring (list active inactive) t)
+    (dj/transparency-apply (list active inactive))))
+
+(global-set-key (kbd "C-d") 'dj/duplicate-line)      ;; Duplicate Line
+
+(defun dj/duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+)
+
+(global-set-key (kbd "C-c r") 'dj/reload-init-file)
+
+(defun dj/reload-init-file ()
+  (interactive)
+  (load-file "~/.emacs.d/init.el"))
+
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+;(define-key input-decode-map "\e\eOA" [(meta up)])
+;(define-key input-decode-map "\e\eOB" [(meta down)])
+
+(global-set-key [(meta up)]  'move-line-up)
+(global-set-key [(meta down)]  'move-line-down)
+
 (setq auto-mode-alist
       (append
        (list (cons "\\.org$" 'org-mode)
@@ -1298,6 +1414,8 @@ orig-fg))))
 
 )
 
+(setq org-priority-highest "A"
+org-priority-lowest "C")
 
     
 (setq mu4e-org-contacts-file  "~/org/contacts.org")

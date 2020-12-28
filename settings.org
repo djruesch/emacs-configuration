@@ -55,6 +55,158 @@
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 )
 #+end_src
+* My Scripts
+** Org-Agenda_with_Tip
+#+begin_src emacs-lisp
+(cd (getenv "HOME"))
+
+(defun dj/org-agenda-with-tip (arg)
+  "Show agenda for ARG days."
+  (org-agenda-list arg)
+  (let ((inhibit-read-only t)
+	(pos (point)))
+    (goto-char (point-max))
+    (goto-char pos)))
+#+end_src
+** Kill Current Buffer
+ #+begin_src emacs-lisp
+ (defun dj/kill-this-buffer ()
+   "Kill the current buffer"
+   (interactive)
+   (kill-buffer (current-buffer)))
+
+ (bind-keys
+  ("C-x C-k" . dj/kill-this-buffer))
+ #+end_src
+** Dynamic Font Size
+#+begin_src emacs-lisp
+(defun dj/change-frame-font-size (fn)
+  "Change the frame font size according to function FN."
+  (let* ((font-name (frame-parameter nil 'font))
+     (decomposed-font-name (x-decompose-font-name font-name))
+     (font-size (string-to-number (aref decomposed-font-name 5))))
+    (aset decomposed-font-name 5 (int-to-string (funcall fn font-size)))
+    (set-frame-font (x-compose-font-name decomposed-font-name))))
+
+(defun dj/frame-text-scale-increase ()
+  "Increase the frame font size by 1."
+  (interactive)
+  (dj/change-frame-font-size '1+))
+
+(defun dj/frame-text-scale-decrease ()
+  "Decrease the frame font size by 1."
+  (interactive)
+  (dj/change-frame-font-size '1-))
+
+(bind-keys
+ ("C-+" . text-scale-increase)
+ ("C--" . text-scale-decrease)
+ ("s--" . dj/frame-text-scale-decrease)
+ ("s-+" . dj/frame-text-scale-increase)
+ ("s-=" . dj/frame-text-scale-increase))
+#+end_src
+** Transparency
+ #+begin_src emacs-lisp
+ (use-package ring
+   :commands (dj/transparency-apply dj/transparency-next dj/transparency-previous
+		     dj/transparency-cycle dj/transparency-add)
+   :config
+   (setq dj/transparency-ring
+     (ring-convert-sequence-to-ring (list '(100 100) '(100 50) '(100 10) '(95 50) '(90 50) '(85 50)))
+     dj/transparency
+     (ring-ref dj/transparency-ring 0))
+
+   (defun dj/transparency-apply (trans)
+     "Apply the TRANS alpha value to the frame."
+     (set-frame-parameter (selected-frame) 'alpha (setq dj/transparency trans)))
+
+   (defun dj/transparency-next ()
+     "Apply the next transparency value in the ring `dj/transparency-ring`."
+     (interactive)
+     (dj/transparency-apply (ring-next dj/transparency-ring dj/transparency)))
+
+   (defun dj/transparency-previous ()
+     "Apply the previous transparency value in the ring `dj/transparency-ring`."
+     (interactive)
+     (dj/transparency-apply (ring-previous dj/transparency-ring dj/transparency)))
+
+   (defun dj/transparency-cycle ()
+     "Cycle to the next transparency setting."
+     (interactive)
+     (dj/transparency-next))
+
+   (defun dj/transparency-add (active inactive)
+     "Add ACTIVE and INACTIVE transparency values to the ring."
+     (interactive "nActive Transparency:\nnInactive Transparency:")
+     (ring-insert+extend dj/transparency-ring (list active inactive) t)
+     (dj/transparency-apply (list active inactive))))
+ #+end_src
+** Duplicate Line
+*** Key Bindings
+:PROPERTIES:
+:ID:       053AD3F9-E892-4B14-B770-7B0122F32515
+:END:
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-d") 'dj/duplicate-line)      ;; Duplicate Line
+#+end_src
+*** Code
+:PROPERTIES:
+:ID:       04641334-7824-4ACE-BC5F-8502AFCF9C23
+:END:
+   #+begin_src emacs-lisp
+   (defun dj/duplicate-line()
+     (interactive)
+     (move-beginning-of-line 1)
+     (kill-line)
+     (yank)
+     (open-line 1)
+     (next-line 1)
+     (yank)
+   )
+
+   #+end_src
+** Reload Config File
+*** Key Bindings
+:PROPERTIES:
+:ID:       C2139E25-3D49-4066-A416-AAA80F4A8B9C
+:END:
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-c r") 'dj/reload-init-file)
+#+end_src
+*** Code
+:PROPERTIES:
+:ID:       301C3B60-AE60-4AAB-9BBE-9E19E8821F9A
+:END:
+ #+begin_src emacs-lisp
+ (defun dj/reload-init-file ()
+   (interactive)
+   (load-file "~/.emacs.d/init.el"))
+#+end_src
+** Move Lines
+#+begin_src emacs-lisp
+
+
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+;(define-key input-decode-map "\e\eOA" [(meta up)])
+;(define-key input-decode-map "\e\eOB" [(meta down)])
+
+(global-set-key [(meta up)]  'move-line-up)
+(global-set-key [(meta down)]  'move-line-down)
+#+end_src
 * Configurations
 ** Autoloads
 #+begin_src emacs-lisp
@@ -1499,6 +1651,8 @@ do not already have one."
 
 )
 
+(setq org-priority-highest "A"
+org-priority-lowest "C")
 
     
 (setq mu4e-org-contacts-file  "~/org/contacts.org")
