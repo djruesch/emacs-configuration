@@ -1,0 +1,1 @@
+/Users/djruesch/.emacs.d/straight/repos/helm-bibtex/helm-bibtex.el

@@ -1,0 +1,1 @@
+/Users/djruesch/.emacs.d/straight/repos/emms/emms-tag-editor.el

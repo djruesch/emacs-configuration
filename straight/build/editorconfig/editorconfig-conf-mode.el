@@ -1,0 +1,1 @@
+/Users/djruesch/.emacs.d/straight/repos/editorconfig-emacs/editorconfig-conf-mode.el

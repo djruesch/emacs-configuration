@@ -1,0 +1,1 @@
+/Users/djruesch/.emacs.d/straight/repos/monokai-emacs/monokai-theme.el
