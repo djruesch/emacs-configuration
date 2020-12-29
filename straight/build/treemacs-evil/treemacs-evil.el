@@ -1,0 +1,1 @@
+/Users/djruesch/.emacs.d/straight/repos/treemacs/src/extra/treemacs-evil.el

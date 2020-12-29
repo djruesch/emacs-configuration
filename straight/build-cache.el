@@ -3,9 +3,9 @@
 
 "27.1"
 
-#s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("org-elpa" ("2020-12-28 21:27:09" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2020-12-28 21:27:09" nil (:type git :host github :repo "melpa/melpa" :no-build t :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2020-12-28 21:27:09" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :no-build t :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "emacsmirror-mirror" ("2020-12-28 21:27:09" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :no-build t :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "straight" ("2020-12-28 21:27:04" ("emacs") (:type git :host github :repo "raxod502/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "use-package" ("2020-12-28 21:27:04" ("emacs" "bind-key") (:type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package" :package "use-package" :local-repo "use-package")) "bind-key" ("2020-12-28 21:27:04" nil (:flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :package "bind-key" :local-repo "use-package" :type git :repo "jwiegley/use-package" :host github)) "editorconfig" ("2020-12-28 21:27:08" ("cl-lib" "emacs") (:type git :flavor melpa :host github :repo "editorconfig/editorconfig-emacs" :package "editorconfig" :local-repo "editorconfig-emacs")) "elpy" ("2020-12-28 21:27:08" ("company" "emacs" "highlight-indentation" "pyvenv" "yasnippet" "s") (:type git :flavor melpa :files ("*.el" "NEWS.rst" "snippets" "elpy" "elpy-pkg.el") :host github :repo "jorgenschaefer/elpy" :package "elpy" :local-repo "elpy")) "company" ("2020-12-28 21:27:05" ("emacs") (:type git :flavor melpa :host github :repo "company-mode/company-mode" :package "company" :local-repo "company-mode")) "highlight-indentation" ("2020-12-28 21:27:08" nil (:type git :flavor melpa :host github :repo "antonj/Highlight-Indentation-for-Emacs" :package "highlight-indentation" :local-repo "Highlight-Indentation-for-Emacs")) "pyvenv" ("2020-12-28 21:27:08" nil (:type git :flavor melpa :host github :repo "jorgenschaefer/pyvenv" :package "pyvenv" :local-repo "pyvenv")) "yasnippet" ("2020-12-28 21:27:07" ("cl-lib") (:type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet" :package "yasnippet" :local-repo "yasnippet")) "s" ("2020-12-28 21:27:05" nil (:type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el" :package "s" :local-repo "s.el")) "monokai-theme" ("2020-12-28 21:27:04" nil (:type git :flavor melpa :host github :repo "oneKelvinSmith/monokai-emacs" :package "monokai-theme" :local-repo "monokai-emacs")) "tramp" ("2020-12-28 21:27:04" ("emacs") (:type git :host github :repo "emacs-straight/tramp" :files ("*" (:exclude ".git")) :package "tramp" :local-repo "tramp")) "helm-tramp" ("2020-12-28 21:27:04" ("emacs" "helm") (:type git :flavor melpa :host github :repo "masasam/emacs-helm-tramp" :package "helm-tramp" :local-repo "emacs-helm-tramp")) "helm" ("2020-12-28 21:27:04" ("emacs" "async" "popup" "helm-core") (:type git :flavor melpa :files ("*.el" "emacs-helm.sh" (:exclude "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") "helm-pkg.el") :host github :repo "emacs-helm/helm" :package "helm" :local-repo "helm")) "async" ("2020-12-28 21:27:04" ("emacs") (:type git :flavor melpa :host github :repo "jwiegley/emacs-async" :package "async" :local-repo "emacs-async")) "popup" ("2020-12-28 21:27:04" ("cl-lib") (:type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el" :package "popup" :local-repo "popup-el")) "helm-core" ("2020-12-28 21:27:04" ("emacs" "async") (:flavor melpa :files ("helm-core-pkg.el" "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") :package "helm-core" :local-repo "helm" :type git :repo "emacs-helm/helm" :host github)) "exec-path-from-shell" ("2020-12-28 21:27:04" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "purcell/exec-path-from-shell" :package "exec-path-from-shell" :local-repo "exec-path-from-shell")) "helm-projectile" ("2020-12-28 21:27:05" ("helm" "projectile" "cl-lib") (:type git :flavor melpa :host github :repo "bbatsov/helm-projectile" :package "helm-projectile" :local-repo "helm-projectile")) "projectile" ("2020-12-28 21:27:05" ("emacs" "pkg-info") (:type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile" :package "projectile" :local-repo "projectile")) "pkg-info" ("2020-12-28 21:27:05" ("epl") (:type git :flavor melpa :host github :repo "emacsorphanage/pkg-info" :package "pkg-info" :local-repo "pkg-info")) "epl" ("2020-12-28 21:27:05" ("cl-lib") (:type git :flavor melpa :host github :repo "cask/epl" :package "epl" :local-repo "epl")) "helm-descbinds" ("2020-12-28 21:27:05" ("helm") (:type git :flavor melpa :host github :repo "emacs-helm/helm-descbinds" :package "helm-descbinds" :local-repo "helm-descbinds")) "helm-bibtex" ("2020-12-28 21:27:05" ("bibtex-completion" "helm" "cl-lib" "emacs") (:type git :flavor melpa :files ("helm-bibtex.el" "helm-bibtex-pkg.el") :host github :repo "tmalsburg/helm-bibtex" :package "helm-bibtex" :local-repo "helm-bibtex")) "bibtex-completion" ("2020-12-28 21:27:05" ("parsebib" "s" "dash" "f" "cl-lib" "biblio" "emacs") (:flavor melpa :files ("bibtex-completion.el" "bibtex-completion-pkg.el") :package "bibtex-completion" :local-repo "helm-bibtex" :type git :repo "tmalsburg/helm-bibtex" :host github)) "parsebib" ("2020-12-28 21:27:05" ("emacs") (:type git :flavor melpa :host github :repo "joostkremers/parsebib" :package "parsebib" :local-repo "parsebib")) "dash" ("2020-12-28 21:27:05" nil (:type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el" :package "dash" :local-repo "dash.el")) "f" ("2020-12-28 21:27:05" ("s" "dash") (:type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el" :package "f" :local-repo "f.el")) "biblio" ("2020-12-28 21:27:05" ("emacs" "biblio-core") (:type git :flavor melpa :files (:defaults (:exclude "biblio-core.el") "biblio-pkg.el") :host github :repo "cpitclaudel/biblio.el" :package "biblio" :local-repo "biblio.el")) "biblio-core" ("2020-12-28 21:27:05" ("emacs" "let-alist" "seq" "dash") (:flavor melpa :files ("biblio-core.el" "biblio-core-pkg.el") :package "biblio-core" :local-repo "biblio.el" :type git :repo "cpitclaudel/biblio.el" :host github)) "let-alist" ("2020-12-28 21:27:05" ("emacs") (:type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git")) :package "let-alist" :local-repo "let-alist")) "hydra" ("2020-12-28 21:27:05" ("cl-lib" "lv") (:type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra" :package "hydra" :local-repo "hydra")) "lv" ("2020-12-28 21:27:05" nil (:flavor melpa :files ("lv.el" "lv-pkg.el") :package "lv" :local-repo "hydra" :type git :repo "abo-abo/hydra" :host github)) "helpful" ("2020-12-28 21:27:05" ("emacs" "dash" "dash-functional" "s" "f" "elisp-refs") (:type git :flavor melpa :host github :repo "Wilfred/helpful" :package "helpful" :local-repo "helpful")) "dash-functional" ("2020-12-28 21:27:05" ("dash" "emacs") (:flavor melpa :files ("dash-functional.el" "dash-functional-pkg.el") :package "dash-functional" :local-repo "dash.el" :type git :repo "magnars/dash.el" :host github)) "elisp-refs" ("2020-12-28 21:27:05" ("dash" "s") (:type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs" :package "elisp-refs" :local-repo "elisp-refs")) "info+" ("2020-12-28 21:27:05" nil (:type git :host github :repo "emacsmirror/info-plus" :package "info+" :local-repo "info-plus")) "counsel-projectile" ("2020-12-28 21:27:05" ("counsel" "projectile") (:type git :flavor melpa :host github :repo "ericdanan/counsel-projectile" :package "counsel-projectile" :local-repo "counsel-projectile")) "counsel" ("2020-12-28 21:27:05" ("emacs" "swiper") (:type git :flavor melpa :files ("counsel.el" "counsel-pkg.el") :host github :repo "abo-abo/swiper" :package "counsel" :local-repo "swiper")) "swiper" ("2020-12-28 21:27:05" ("emacs" "ivy") (:flavor melpa :files ("swiper.el" "swiper-pkg.el") :package "swiper" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "ivy" ("2020-12-28 21:27:05" ("emacs") (:flavor melpa :files (:defaults (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "doc/ivy-help.org" "ivy-pkg.el") :package "ivy" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "perspective" ("2020-12-28 21:27:05" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "nex3/perspective-el" :package "perspective" :local-repo "perspective-el")) "all-the-icons" ("2020-12-28 21:27:05" ("emacs" "memoize") (:type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el" :package "all-the-icons" :local-repo "all-the-icons.el")) "memoize" ("2020-12-28 21:27:05" nil (:type git :flavor melpa :host github :repo "skeeto/emacs-memoize" :package "memoize" :local-repo "emacs-memoize")) "all-the-icons-dired" ("2020-12-28 21:27:05" ("emacs" "all-the-icons") (:type git :flavor melpa :host github :repo "jtbm37/all-the-icons-dired" :package "all-the-icons-dired" :local-repo "all-the-icons-dired")) "pdf-tools" ("2020-12-28 21:27:05" ("emacs" "tablist" "let-alist") (:type git :flavor melpa :files ("lisp/*.el" "README" ("build" "Makefile") ("build" "server") (:exclude "lisp/tablist.el" "lisp/tablist-filter.el") "pdf-tools-pkg.el") :host github :repo "politza/pdf-tools" :package "pdf-tools" :local-repo "pdf-tools")) "tablist" ("2020-12-28 21:27:05" ("emacs") (:type git :flavor melpa :host github :repo "politza/tablist" :package "tablist" :local-repo "tablist")) "dired-hacks-utils" ("2020-12-28 21:27:07" ("dash") (:type git :flavor melpa :files ("dired-hacks-utils.el" "dired-hacks-utils-pkg.el") :host github :repo "Fuco1/dired-hacks" :package "dired-hacks-utils" :local-repo "dired-hacks")) "dired-filter" ("2020-12-28 21:27:07" ("dash" "dired-hacks-utils" "f" "cl-lib") (:flavor melpa :files ("dired-filter.el" "dired-filter-pkg.el") :package "dired-filter" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "dired-rainbow" ("2020-12-28 21:27:07" ("dash" "dired-hacks-utils") (:flavor melpa :files ("dired-rainbow.el" "dired-rainbow-pkg.el") :package "dired-rainbow" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "dired-narrow" ("2020-12-28 21:27:07" ("dash" "dired-hacks-utils") (:flavor melpa :files ("dired-narrow.el" "dired-narrow-pkg.el") :package "dired-narrow" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "dired-collapse" ("2020-12-28 21:27:07" ("dash" "f" "dired-hacks-utils") (:flavor melpa :files ("dired-collapse.el" "dired-collapse-pkg.el") :package "dired-collapse" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "nov" ("2020-12-28 21:27:07" ("dash" "esxml" "emacs") (:type git :flavor melpa :repo "https://depp.brause.cc/nov.el.git" :package "nov" :local-repo "nov.el")) "esxml" ("2020-12-28 21:27:07" nil (:type git :flavor melpa :files ("esxml.el" "esxml-query.el" "esxml-pkg.el") :host github :repo "tali713/esxml" :package "esxml" :local-repo "esxml")) "elfeed" ("2020-12-28 21:27:07" ("emacs") (:type git :flavor melpa :host github :repo "skeeto/elfeed" :package "elfeed" :local-repo "elfeed")) "elfeed-org" ("2020-12-28 21:27:07" ("elfeed" "org" "dash" "s" "cl-lib") (:type git :flavor melpa :host github :repo "remyhonig/elfeed-org" :package "elfeed-org" :local-repo "elfeed-org")) "org" ("2020-12-28 21:27:07" nil (:type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org" :package "org")) "emms" ("2020-12-28 21:27:07" ("cl-lib" "seq") (:type git :flavor melpa :files ("*.el" "lisp/*.el" "doc/emms.texinfo" "emms-pkg.el") :repo "https://git.savannah.gnu.org/git/emms.git" :package "emms" :local-repo "emms")) "mu4e" ("2020-12-28 21:27:07" nil (:type git :host github :repo "emacsmirror/mu4e" :package "mu4e" :local-repo "mu4e")) "dashboard" ("2020-12-28 21:27:07" ("emacs" "page-break-lines") (:type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard" :package "dashboard" :local-repo "emacs-dashboard")) "page-break-lines" ("2020-12-28 21:27:07" ("emacs") (:type git :flavor melpa :host github :repo "purcell/page-break-lines" :package "page-break-lines" :local-repo "page-break-lines")) "which-key" ("2020-12-28 21:27:07" ("emacs") (:type git :flavor melpa :host github :repo "justbur/emacs-which-key" :package "which-key" :local-repo "emacs-which-key")) "magit" ("2020-12-28 21:27:07" ("emacs" "async" "dash" "git-commit" "transient" "with-editor") (:type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit" :package "magit" :local-repo "magit")) "git-commit" ("2020-12-28 21:27:07" ("emacs" "dash" "transient" "with-editor") (:flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :package "git-commit" :local-repo "magit" :type git :repo "magit/magit" :host github)) "transient" ("2020-12-28 21:27:07" ("emacs") (:type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient" :package "transient" :local-repo "transient")) "with-editor" ("2020-12-28 21:27:07" ("emacs" "async") (:type git :flavor melpa :host github :repo "magit/with-editor" :package "with-editor" :local-repo "with-editor")) "magit-todos" ("2020-12-28 21:27:07" ("emacs" "async" "dash" "f" "hl-todo" "magit" "pcre2el" "s") (:type git :flavor melpa :host github :repo "alphapapa/magit-todos" :package "magit-todos" :local-repo "magit-todos")) "hl-todo" ("2020-12-28 21:27:07" ("emacs") (:type git :flavor melpa :host github :repo "tarsius/hl-todo" :package "hl-todo" :local-repo "hl-todo")) "pcre2el" ("2020-12-28 21:27:07" ("emacs" "cl-lib") (:type git :flavor melpa :files ("pcre2el.el" "pcre2el-pkg.el") :host github :repo "joddie/pcre2el" :package "pcre2el" :local-repo "pcre2el")) "engine-mode" ("2020-12-28 21:27:07" ("cl-lib") (:type git :flavor melpa :host github :repo "hrs/engine-mode" :package "engine-mode" :local-repo "engine-mode")) "yasnippet-snippets" ("2020-12-28 21:27:07" ("yasnippet") (:type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets" :package "yasnippet-snippets" :local-repo "yasnippet-snippets")) "helm-c-yasnippet" ("2020-12-28 21:27:08" ("emacs" "helm" "yasnippet") (:type git :flavor melpa :host github :repo "emacs-jp/helm-c-yasnippet" :package "helm-c-yasnippet" :local-repo "helm-c-yasnippet")) "org-super-agenda" ("2020-12-28 21:27:08" ("emacs" "s" "dash" "org" "ht" "ts") (:type git :flavor melpa :host github :repo "alphapapa/org-super-agenda" :package "org-super-agenda" :local-repo "org-super-agenda")) "ht" ("2020-12-28 21:27:08" ("dash") (:type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el" :package "ht" :local-repo "ht.el")) "ts" ("2020-12-28 21:27:08" ("emacs" "dash" "s") (:type git :flavor melpa :host github :repo "alphapapa/ts.el" :package "ts" :local-repo "ts.el")) "deft" ("2020-12-28 21:27:08" nil (:type git :flavor melpa :host github :repo "jrblevin/deft" :package "deft" :local-repo "deft")) "org-roam" ("2020-12-28 21:27:08" ("emacs" "dash" "f" "s" "org" "emacsql" "emacsql-sqlite3") (:type git :flavor melpa :host github :repo "org-roam/org-roam" :package "org-roam" :local-repo "org-roam")) "emacsql" ("2020-12-28 21:27:08" ("emacs") (:type git :flavor melpa :files ("emacsql.el" "emacsql-compiler.el" "emacsql-system.el" "README.md" "emacsql-pkg.el") :host github :repo "skeeto/emacsql" :package "emacsql" :local-repo "emacsql")) "emacsql-sqlite3" ("2020-12-28 21:27:08" ("emacs" "emacsql") (:type git :flavor melpa :host github :repo "cireu/emacsql-sqlite3" :package "emacsql-sqlite3" :local-repo "emacsql-sqlite3")) "org-roam-bibtex" ("2020-12-28 21:27:08" ("emacs" "org-roam" "bibtex-completion") (:type git :flavor melpa :host github :repo "org-roam/org-roam-bibtex" :package "org-roam-bibtex" :local-repo "org-roam-bibtex")) "org-ref" ("2020-12-28 21:27:08" ("dash" "htmlize" "helm" "helm-bibtex" "ivy" "hydra" "key-chord" "s" "f" "pdf-tools") (:type git :flavor melpa :files (:defaults "org-ref.org" "org-ref.bib" "citeproc" "org-ref-pkg.el") :host github :repo "jkitchin/org-ref" :package "org-ref" :local-repo "org-ref")) "htmlize" ("2020-12-28 21:27:08" nil (:type git :flavor melpa :host github :repo "hniksic/emacs-htmlize" :package "htmlize" :local-repo "emacs-htmlize")) "key-chord" ("2020-12-28 21:27:08" ("emacs") (:type git :flavor melpa :host github :repo "emacsorphanage/key-chord" :package "key-chord" :local-repo "key-chord")) "org-noter" ("2020-12-28 21:27:08" ("emacs" "cl-lib" "org") (:type git :flavor melpa :host github :repo "weirdNox/org-noter" :package "org-noter" :local-repo "org-noter")) "org-journal" ("2020-12-28 21:27:08" ("emacs" "org") (:type git :flavor melpa :host github :repo "bastibe/org-journal" :package "org-journal" :local-repo "org-journal")) "org-cliplink" ("2020-12-28 21:27:08" ("emacs") (:type git :flavor melpa :host github :repo "rexim/org-cliplink" :package "org-cliplink" :local-repo "org-cliplink"))))
+#s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("org-elpa" ("2020-12-29 11:45:59" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2020-12-29 11:45:59" nil (:type git :host github :repo "melpa/melpa" :no-build t :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2020-12-29 11:45:59" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :no-build t :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "emacsmirror-mirror" ("2020-12-29 11:45:59" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :no-build t :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "straight" ("2020-12-29 11:45:59" ("emacs") (:type git :host github :repo "raxod502/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "use-package" ("2020-12-29 11:45:59" ("emacs" "bind-key") (:type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package" :package "use-package" :local-repo "use-package")) "bind-key" ("2020-12-29 11:45:59" nil (:flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :package "bind-key" :local-repo "use-package" :type git :repo "jwiegley/use-package" :host github)) "editorconfig" ("2020-12-29 11:45:59" ("cl-lib" "emacs") (:type git :flavor melpa :host github :repo "editorconfig/editorconfig-emacs" :package "editorconfig" :local-repo "editorconfig-emacs")) "elpy" ("2020-12-29 11:45:59" ("company" "emacs" "highlight-indentation" "pyvenv" "yasnippet" "s") (:type git :flavor melpa :files ("*.el" "NEWS.rst" "snippets" "elpy" "elpy-pkg.el") :host github :repo "jorgenschaefer/elpy" :package "elpy" :local-repo "elpy")) "company" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "company-mode/company-mode" :package "company" :local-repo "company-mode")) "highlight-indentation" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "antonj/Highlight-Indentation-for-Emacs" :package "highlight-indentation" :local-repo "Highlight-Indentation-for-Emacs")) "pyvenv" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "jorgenschaefer/pyvenv" :package "pyvenv" :local-repo "pyvenv")) "yasnippet" ("2020-12-29 11:45:59" ("cl-lib") (:type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet" :package "yasnippet" :local-repo "yasnippet")) "s" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el" :package "s" :local-repo "s.el")) "monokai-theme" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "oneKelvinSmith/monokai-emacs" :package "monokai-theme" :local-repo "monokai-emacs")) "tramp" ("2020-12-29 11:45:59" ("emacs") (:type git :host github :repo "emacs-straight/tramp" :files ("*" (:exclude ".git")) :package "tramp" :local-repo "tramp")) "helm-tramp" ("2020-12-29 11:45:59" ("emacs" "helm") (:type git :flavor melpa :host github :repo "masasam/emacs-helm-tramp" :package "helm-tramp" :local-repo "emacs-helm-tramp")) "helm" ("2020-12-29 11:45:59" ("emacs" "async" "popup" "helm-core") (:type git :flavor melpa :files ("*.el" "emacs-helm.sh" (:exclude "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") "helm-pkg.el") :host github :repo "emacs-helm/helm" :package "helm" :local-repo "helm")) "async" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "jwiegley/emacs-async" :package "async" :local-repo "emacs-async")) "popup" ("2020-12-29 11:45:59" ("cl-lib") (:type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el" :package "popup" :local-repo "popup-el")) "helm-core" ("2020-12-29 11:45:59" ("emacs" "async") (:flavor melpa :files ("helm-core-pkg.el" "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") :package "helm-core" :local-repo "helm" :type git :repo "emacs-helm/helm" :host github)) "exec-path-from-shell" ("2020-12-29 11:45:59" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "purcell/exec-path-from-shell" :package "exec-path-from-shell" :local-repo "exec-path-from-shell")) "helm-projectile" ("2020-12-29 11:45:59" ("helm" "projectile" "cl-lib") (:type git :flavor melpa :host github :repo "bbatsov/helm-projectile" :package "helm-projectile" :local-repo "helm-projectile")) "projectile" ("2020-12-29 11:45:59" ("emacs" "pkg-info") (:type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile" :package "projectile" :local-repo "projectile")) "pkg-info" ("2020-12-29 11:45:59" ("epl") (:type git :flavor melpa :host github :repo "emacsorphanage/pkg-info" :package "pkg-info" :local-repo "pkg-info")) "epl" ("2020-12-29 11:45:59" ("cl-lib") (:type git :flavor melpa :host github :repo "cask/epl" :package "epl" :local-repo "epl")) "helm-descbinds" ("2020-12-29 11:45:59" ("helm") (:type git :flavor melpa :host github :repo "emacs-helm/helm-descbinds" :package "helm-descbinds" :local-repo "helm-descbinds")) "helm-bibtex" ("2020-12-29 11:45:59" ("bibtex-completion" "helm" "cl-lib" "emacs") (:type git :flavor melpa :files ("helm-bibtex.el" "helm-bibtex-pkg.el") :host github :repo "tmalsburg/helm-bibtex" :package "helm-bibtex" :local-repo "helm-bibtex")) "bibtex-completion" ("2020-12-29 11:45:59" ("parsebib" "s" "dash" "f" "cl-lib" "biblio" "emacs") (:flavor melpa :files ("bibtex-completion.el" "bibtex-completion-pkg.el") :package "bibtex-completion" :local-repo "helm-bibtex" :type git :repo "tmalsburg/helm-bibtex" :host github)) "parsebib" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "joostkremers/parsebib" :package "parsebib" :local-repo "parsebib")) "dash" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el" :package "dash" :local-repo "dash.el")) "f" ("2020-12-29 11:45:59" ("s" "dash") (:type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el" :package "f" :local-repo "f.el")) "biblio" ("2020-12-29 11:45:59" ("emacs" "biblio-core") (:type git :flavor melpa :files (:defaults (:exclude "biblio-core.el") "biblio-pkg.el") :host github :repo "cpitclaudel/biblio.el" :package "biblio" :local-repo "biblio.el")) "biblio-core" ("2020-12-29 11:45:59" ("emacs" "let-alist" "seq" "dash") (:flavor melpa :files ("biblio-core.el" "biblio-core-pkg.el") :package "biblio-core" :local-repo "biblio.el" :type git :repo "cpitclaudel/biblio.el" :host github)) "let-alist" ("2020-12-29 11:45:59" ("emacs") (:type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git")) :package "let-alist" :local-repo "let-alist")) "hydra" ("2020-12-29 11:45:59" ("cl-lib" "lv") (:type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra" :package "hydra" :local-repo "hydra")) "lv" ("2020-12-29 11:45:59" nil (:flavor melpa :files ("lv.el" "lv-pkg.el") :package "lv" :local-repo "hydra" :type git :repo "abo-abo/hydra" :host github)) "helpful" ("2020-12-29 11:45:59" ("emacs" "dash" "dash-functional" "s" "f" "elisp-refs") (:type git :flavor melpa :host github :repo "Wilfred/helpful" :package "helpful" :local-repo "helpful")) "dash-functional" ("2020-12-29 11:45:59" ("dash" "emacs") (:flavor melpa :files ("dash-functional.el" "dash-functional-pkg.el") :package "dash-functional" :local-repo "dash.el" :type git :repo "magnars/dash.el" :host github)) "elisp-refs" ("2020-12-29 11:45:59" ("dash" "s") (:type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs" :package "elisp-refs" :local-repo "elisp-refs")) "info+" ("2020-12-29 11:45:59" nil (:type git :host github :repo "emacsmirror/info-plus" :package "info+" :local-repo "info-plus")) "counsel-projectile" ("2020-12-29 11:45:59" ("counsel" "projectile") (:type git :flavor melpa :host github :repo "ericdanan/counsel-projectile" :package "counsel-projectile" :local-repo "counsel-projectile")) "counsel" ("2020-12-29 11:45:59" ("emacs" "swiper") (:type git :flavor melpa :files ("counsel.el" "counsel-pkg.el") :host github :repo "abo-abo/swiper" :package "counsel" :local-repo "swiper")) "swiper" ("2020-12-29 11:45:59" ("emacs" "ivy") (:flavor melpa :files ("swiper.el" "swiper-pkg.el") :package "swiper" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "ivy" ("2020-12-29 11:45:59" ("emacs") (:flavor melpa :files (:defaults (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "doc/ivy-help.org" "ivy-pkg.el") :package "ivy" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "perspective" ("2020-12-29 11:45:59" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "nex3/perspective-el" :package "perspective" :local-repo "perspective-el")) "all-the-icons" ("2020-12-29 11:45:59" ("emacs" "memoize") (:type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el" :package "all-the-icons" :local-repo "all-the-icons.el")) "memoize" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "skeeto/emacs-memoize" :package "memoize" :local-repo "emacs-memoize")) "all-the-icons-dired" ("2020-12-29 11:45:59" ("emacs" "all-the-icons") (:type git :flavor melpa :host github :repo "jtbm37/all-the-icons-dired" :package "all-the-icons-dired" :local-repo "all-the-icons-dired")) "pdf-tools" ("2020-12-29 11:45:59" ("emacs" "tablist" "let-alist") (:type git :flavor melpa :files ("lisp/*.el" "README" ("build" "Makefile") ("build" "server") (:exclude "lisp/tablist.el" "lisp/tablist-filter.el") "pdf-tools-pkg.el") :host github :repo "politza/pdf-tools" :package "pdf-tools" :local-repo "pdf-tools")) "tablist" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "politza/tablist" :package "tablist" :local-repo "tablist")) "dired-hacks-utils" ("2020-12-29 11:45:59" ("dash") (:type git :flavor melpa :files ("dired-hacks-utils.el" "dired-hacks-utils-pkg.el") :host github :repo "Fuco1/dired-hacks" :package "dired-hacks-utils" :local-repo "dired-hacks")) "dired-filter" ("2020-12-29 11:45:59" ("dash" "dired-hacks-utils" "f" "cl-lib") (:flavor melpa :files ("dired-filter.el" "dired-filter-pkg.el") :package "dired-filter" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "dired-rainbow" ("2020-12-29 11:45:59" ("dash" "dired-hacks-utils") (:flavor melpa :files ("dired-rainbow.el" "dired-rainbow-pkg.el") :package "dired-rainbow" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "dired-narrow" ("2020-12-29 11:45:59" ("dash" "dired-hacks-utils") (:flavor melpa :files ("dired-narrow.el" "dired-narrow-pkg.el") :package "dired-narrow" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "dired-collapse" ("2020-12-29 11:45:59" ("dash" "f" "dired-hacks-utils") (:flavor melpa :files ("dired-collapse.el" "dired-collapse-pkg.el") :package "dired-collapse" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "nov" ("2020-12-29 11:45:59" ("dash" "esxml" "emacs") (:type git :flavor melpa :repo "https://depp.brause.cc/nov.el.git" :package "nov" :local-repo "nov.el")) "esxml" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :files ("esxml.el" "esxml-query.el" "esxml-pkg.el") :host github :repo "tali713/esxml" :package "esxml" :local-repo "esxml")) "elfeed" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "skeeto/elfeed" :package "elfeed" :local-repo "elfeed")) "elfeed-org" ("2020-12-29 11:45:59" ("elfeed" "org" "dash" "s" "cl-lib") (:type git :flavor melpa :host github :repo "remyhonig/elfeed-org" :package "elfeed-org" :local-repo "elfeed-org")) "org" ("2020-12-29 11:45:59" nil (:type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org" :package "org")) "emms" ("2020-12-29 11:45:59" ("cl-lib" "seq") (:type git :flavor melpa :files ("*.el" "lisp/*.el" "doc/emms.texinfo" "emms-pkg.el") :repo "https://git.savannah.gnu.org/git/emms.git" :package "emms" :local-repo "emms")) "mu4e" ("2020-12-29 11:45:59" nil (:type git :host github :repo "emacsmirror/mu4e" :package "mu4e" :local-repo "mu4e")) "dashboard" ("2020-12-29 11:45:59" ("emacs" "page-break-lines") (:type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard" :package "dashboard" :local-repo "emacs-dashboard")) "page-break-lines" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "purcell/page-break-lines" :package "page-break-lines" :local-repo "page-break-lines")) "which-key" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "justbur/emacs-which-key" :package "which-key" :local-repo "emacs-which-key")) "magit" ("2020-12-29 11:45:59" ("emacs" "async" "dash" "git-commit" "transient" "with-editor") (:type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit" :package "magit" :local-repo "magit")) "git-commit" ("2020-12-29 11:45:59" ("emacs" "dash" "transient" "with-editor") (:flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :package "git-commit" :local-repo "magit" :type git :repo "magit/magit" :host github)) "transient" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient" :package "transient" :local-repo "transient")) "with-editor" ("2020-12-29 11:45:59" ("emacs" "async") (:type git :flavor melpa :host github :repo "magit/with-editor" :package "with-editor" :local-repo "with-editor")) "magit-todos" ("2020-12-29 11:45:59" ("emacs" "async" "dash" "f" "hl-todo" "magit" "pcre2el" "s") (:type git :flavor melpa :host github :repo "alphapapa/magit-todos" :package "magit-todos" :local-repo "magit-todos")) "hl-todo" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "tarsius/hl-todo" :package "hl-todo" :local-repo "hl-todo")) "pcre2el" ("2020-12-29 11:45:59" ("emacs" "cl-lib") (:type git :flavor melpa :files ("pcre2el.el" "pcre2el-pkg.el") :host github :repo "joddie/pcre2el" :package "pcre2el" :local-repo "pcre2el")) "engine-mode" ("2020-12-29 11:45:59" ("cl-lib") (:type git :flavor melpa :host github :repo "hrs/engine-mode" :package "engine-mode" :local-repo "engine-mode")) "yasnippet-snippets" ("2020-12-29 11:45:59" ("yasnippet") (:type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets" :package "yasnippet-snippets" :local-repo "yasnippet-snippets")) "helm-c-yasnippet" ("2020-12-29 11:45:59" ("emacs" "helm" "yasnippet") (:type git :flavor melpa :host github :repo "emacs-jp/helm-c-yasnippet" :package "helm-c-yasnippet" :local-repo "helm-c-yasnippet")) "org-super-agenda" ("2020-12-29 11:45:59" ("emacs" "s" "dash" "org" "ht" "ts") (:type git :flavor melpa :host github :repo "alphapapa/org-super-agenda" :package "org-super-agenda" :local-repo "org-super-agenda")) "ht" ("2020-12-29 11:45:59" ("dash") (:type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el" :package "ht" :local-repo "ht.el")) "ts" ("2020-12-29 11:45:59" ("emacs" "dash" "s") (:type git :flavor melpa :host github :repo "alphapapa/ts.el" :package "ts" :local-repo "ts.el")) "deft" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "jrblevin/deft" :package "deft" :local-repo "deft")) "org-roam" ("2020-12-29 11:45:59" ("emacs" "dash" "f" "s" "org" "emacsql" "emacsql-sqlite3") (:type git :flavor melpa :host github :repo "org-roam/org-roam" :package "org-roam" :local-repo "org-roam")) "emacsql" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :files ("emacsql.el" "emacsql-compiler.el" "emacsql-system.el" "README.md" "emacsql-pkg.el") :host github :repo "skeeto/emacsql" :package "emacsql" :local-repo "emacsql")) "emacsql-sqlite3" ("2020-12-29 11:45:59" ("emacs" "emacsql") (:type git :flavor melpa :host github :repo "cireu/emacsql-sqlite3" :package "emacsql-sqlite3" :local-repo "emacsql-sqlite3")) "org-roam-bibtex" ("2020-12-29 11:45:59" ("emacs" "org-roam" "bibtex-completion") (:type git :flavor melpa :host github :repo "org-roam/org-roam-bibtex" :package "org-roam-bibtex" :local-repo "org-roam-bibtex")) "org-ref" ("2020-12-29 11:45:59" ("dash" "htmlize" "helm" "helm-bibtex" "ivy" "hydra" "key-chord" "s" "f" "pdf-tools") (:type git :flavor melpa :files (:defaults "org-ref.org" "org-ref.bib" "citeproc" "org-ref-pkg.el") :host github :repo "jkitchin/org-ref" :package "org-ref" :local-repo "org-ref")) "htmlize" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "hniksic/emacs-htmlize" :package "htmlize" :local-repo "emacs-htmlize")) "key-chord" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "emacsorphanage/key-chord" :package "key-chord" :local-repo "key-chord")) "org-noter" ("2020-12-29 11:45:59" ("emacs" "cl-lib" "org") (:type git :flavor melpa :host github :repo "weirdNox/org-noter" :package "org-noter" :local-repo "org-noter")) "org-journal" ("2020-12-29 11:45:59" ("emacs" "org") (:type git :flavor melpa :host github :repo "bastibe/org-journal" :package "org-journal" :local-repo "org-journal")) "org-cliplink" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "rexim/org-cliplink" :package "org-cliplink" :local-repo "org-cliplink")) "dired-sidebar" ("2020-12-29 11:14:04" ("emacs" "dired-subtree") (:type git :flavor melpa :host github :repo "jojojames/dired-sidebar" :package "dired-sidebar" :local-repo "dired-sidebar")) "dired-subtree" ("2020-12-29 11:14:04" ("dash" "dired-hacks-utils") (:flavor melpa :files ("dired-subtree.el" "dired-subtree-pkg.el") :package "dired-subtree" :local-repo "dired-hacks" :type git :repo "Fuco1/dired-hacks" :host github)) "treemacs" ("2020-12-29 11:45:59" ("emacs" "cl-lib" "dash" "s" "f" "ace-window" "pfuture" "hydra" "ht" "cfrs") (:type git :flavor melpa :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el") :host github :repo "Alexander-Miller/treemacs" :package "treemacs" :local-repo "treemacs")) "ace-window" ("2020-12-29 11:45:59" ("avy") (:type git :flavor melpa :host github :repo "abo-abo/ace-window" :package "ace-window" :local-repo "ace-window")) "avy" ("2020-12-29 11:45:59" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "abo-abo/avy" :package "avy" :local-repo "avy")) "pfuture" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "Alexander-Miller/pfuture" :package "pfuture" :local-repo "pfuture")) "cfrs" ("2020-12-29 11:45:59" ("emacs" "dash" "s" "posframe") (:type git :flavor melpa :host github :repo "Alexander-Miller/cfrs" :package "cfrs" :local-repo "cfrs")) "posframe" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "tumashu/posframe" :package "posframe" :local-repo "posframe")) "treemacs-evil" ("2020-12-29 11:45:59" ("emacs" "evil" "treemacs") (:flavor melpa :files ("src/extra/treemacs-evil.el" "treemacs-evil-pkg.el") :package "treemacs-evil" :local-repo "treemacs" :type git :repo "Alexander-Miller/treemacs" :host github)) "evil" ("2020-12-29 11:45:59" ("emacs" "goto-chg" "cl-lib") (:type git :flavor melpa :files (:defaults "doc/build/texinfo/evil.texi" (:exclude "evil-test-helpers.el") "evil-pkg.el") :host github :repo "emacs-evil/evil" :package "evil" :local-repo "evil")) "goto-chg" ("2020-12-29 11:45:59" nil (:type git :flavor melpa :host github :repo "emacs-evil/goto-chg" :package "goto-chg" :local-repo "goto-chg")) "treemacs-projectile" ("2020-12-29 11:45:59" ("emacs" "projectile" "treemacs") (:flavor melpa :files ("src/extra/treemacs-projectile.el" "treemacs-projectile-pkg.el") :package "treemacs-projectile" :local-repo "treemacs" :type git :repo "Alexander-Miller/treemacs" :host github)) "treemacs-icons-dired" ("2020-12-29 11:45:59" ("treemacs" "emacs") (:flavor melpa :files ("src/extra/treemacs-icons-dired.el" "treemacs-icons-dired-pkg.el") :package "treemacs-icons-dired" :local-repo "treemacs" :type git :repo "Alexander-Miller/treemacs" :host github)) "treemacs-magit" ("2020-12-29 11:45:59" ("emacs" "treemacs" "pfuture" "magit") (:flavor melpa :files ("src/extra/treemacs-magit.el" "treemacs-magit-pkg.el") :package "treemacs-magit" :local-repo "treemacs" :type git :repo "Alexander-Miller/treemacs" :host github)) "treemacs-persp" ("2020-12-29 11:45:59" ("emacs" "treemacs" "persp-mode" "dash") (:flavor melpa :files ("src/extra/treemacs-persp.el" "treemacs-persp-pkg.el") :package "treemacs-persp" :local-repo "treemacs" :type git :repo "Alexander-Miller/treemacs" :host github)) "persp-mode" ("2020-12-29 11:45:59" ("emacs") (:type git :flavor melpa :host github :repo "Bad-ptr/persp-mode.el" :package "persp-mode" :local-repo "persp-mode.el"))))
 
-#s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ((straight-x straight-autoloads straight) (autoload 'straight-get-recipe "straight" "Interactively select a recipe from one of the recipe repositories.
+#s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ((straight-x straight-autoloads straight) (autoload 'straight-get-recipe "straight" "Interactively select a recipe from one of the recipe repositories.
 All recipe repositories in `straight-recipe-repositories' will
 first be cloned. After the recipe is selected, it will be copied
 to the kill ring. With a prefix argument, first prompt for a
@@ -6266,10 +6266,620 @@ with the title of a page found by the URL into the current
 buffer" t nil) (autoload 'org-cliplink-capture "org-cliplink" "org-cliplink version for org-capture templates.
 Makes synchronous request. Returns the link instead of inserting
 it to the current buffer. Doesn't support Basic Auth. Doesn't
-support cURL transport." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-cliplink" '("org-cliplink-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-cliplink-string" '("org-cliplink-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-cliplink-transport" '("org-cliplink-"))) (provide 'org-cliplink-autoloads))))
+support cURL transport." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-cliplink" '("org-cliplink-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-cliplink-string" '("org-cliplink-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-cliplink-transport" '("org-cliplink-"))) (provide 'org-cliplink-autoloads)) "dired-subtree" ((dired-subtree dired-subtree-autoloads) (autoload 'dired-subtree-narrow "dired-subtree" "Narrow the buffer to this subtree." t nil) (autoload 'dired-subtree-up "dired-subtree" "Jump up one directory.
 
-#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 1 "melpa" nil "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" nil "bind-key" nil "editorconfig" nil "cl-lib" nil "elpy" nil "company" nil "highlight-indentation" nil "pyvenv" nil "yasnippet" nil "s" nil "monokai-theme" nil "tramp" nil "helm-tramp" nil "helm" nil "async" nil "popup" nil "helm-core" nil "exec-path-from-shell" nil "helm-projectile" nil "projectile" nil "pkg-info" nil "epl" nil "helm-descbinds" nil "helm-bibtex" nil "bibtex-completion" nil "parsebib" nil "dash" nil "f" nil "biblio" nil "biblio-core" nil "let-alist" nil "seq" nil "hydra" nil "lv" nil "helpful" nil "dash-functional" nil "elisp-refs" nil "info+" nil "counsel-projectile" nil "counsel" nil "swiper" nil "ivy" nil "perspective" nil "all-the-icons" nil "memoize" nil "all-the-icons-dired" nil "pdf-tools" nil "tablist" nil "dired-hacks-utils" nil "dired-filter" nil "dired-rainbow" nil "dired-narrow" nil "dired-collapse" nil "nov" nil "esxml" nil "elfeed" nil "elfeed-org" nil "org" (org :type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org") "emms" nil "mu4e" nil "dashboard" nil "page-break-lines" nil "which-key" nil "magit" nil "git-commit" nil "transient" nil "with-editor" nil "magit-todos" nil "hl-todo" nil "pcre2el" nil "engine-mode" nil "yasnippet-snippets" nil "helm-c-yasnippet" nil "org-super-agenda" nil "ht" nil "ts" nil "deft" nil "org-roam" nil "emacsql" nil "emacsql-sqlite3" nil "org-roam-bibtex" nil "org-ref" nil "htmlize" nil "key-chord" nil "org-noter" nil "org-journal" nil "ring" nil "org-cliplink" nil)) melpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" (use-package :type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package") "bind-key" (bind-key :type git :flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :host github :repo "jwiegley/use-package") "editorconfig" (editorconfig :type git :flavor melpa :host github :repo "editorconfig/editorconfig-emacs") "cl-lib" nil "elpy" (elpy :type git :flavor melpa :files ("*.el" "NEWS.rst" "snippets" "elpy" "elpy-pkg.el") :host github :repo "jorgenschaefer/elpy") "company" (company :type git :flavor melpa :host github :repo "company-mode/company-mode") "highlight-indentation" (highlight-indentation :type git :flavor melpa :host github :repo "antonj/Highlight-Indentation-for-Emacs") "pyvenv" (pyvenv :type git :flavor melpa :host github :repo "jorgenschaefer/pyvenv") "yasnippet" (yasnippet :type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet") "s" (s :type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el") "monokai-theme" (monokai-theme :type git :flavor melpa :host github :repo "oneKelvinSmith/monokai-emacs") "tramp" nil "helm-tramp" (helm-tramp :type git :flavor melpa :host github :repo "masasam/emacs-helm-tramp") "helm" (helm :type git :flavor melpa :files ("*.el" "emacs-helm.sh" (:exclude "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") "helm-pkg.el") :host github :repo "emacs-helm/helm") "async" (async :type git :flavor melpa :host github :repo "jwiegley/emacs-async") "popup" (popup :type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el") "helm-core" (helm-core :type git :flavor melpa :files ("helm-core-pkg.el" "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") :host github :repo "emacs-helm/helm") "exec-path-from-shell" (exec-path-from-shell :type git :flavor melpa :host github :repo "purcell/exec-path-from-shell") "helm-projectile" (helm-projectile :type git :flavor melpa :host github :repo "bbatsov/helm-projectile") "projectile" (projectile :type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile") "pkg-info" (pkg-info :type git :flavor melpa :host github :repo "emacsorphanage/pkg-info") "epl" (epl :type git :flavor melpa :host github :repo "cask/epl") "helm-descbinds" (helm-descbinds :type git :flavor melpa :host github :repo "emacs-helm/helm-descbinds") "helm-bibtex" (helm-bibtex :type git :flavor melpa :files ("helm-bibtex.el" "helm-bibtex-pkg.el") :host github :repo "tmalsburg/helm-bibtex") "bibtex-completion" (bibtex-completion :type git :flavor melpa :files ("bibtex-completion.el" "bibtex-completion-pkg.el") :host github :repo "tmalsburg/helm-bibtex") "parsebib" (parsebib :type git :flavor melpa :host github :repo "joostkremers/parsebib") "dash" (dash :type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el") "f" (f :type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el") "biblio" (biblio :type git :flavor melpa :files (:defaults (:exclude "biblio-core.el") "biblio-pkg.el") :host github :repo "cpitclaudel/biblio.el") "biblio-core" (biblio-core :type git :flavor melpa :files ("biblio-core.el" "biblio-core-pkg.el") :host github :repo "cpitclaudel/biblio.el") "let-alist" nil "seq" nil "hydra" (hydra :type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra") "lv" (lv :type git :flavor melpa :files ("lv.el" "lv-pkg.el") :host github :repo "abo-abo/hydra") "helpful" (helpful :type git :flavor melpa :host github :repo "Wilfred/helpful") "dash-functional" (dash-functional :type git :flavor melpa :files ("dash-functional.el" "dash-functional-pkg.el") :host github :repo "magnars/dash.el") "elisp-refs" (elisp-refs :type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs") "info+" nil "counsel-projectile" (counsel-projectile :type git :flavor melpa :host github :repo "ericdanan/counsel-projectile") "counsel" (counsel :type git :flavor melpa :files ("counsel.el" "counsel-pkg.el") :host github :repo "abo-abo/swiper") "swiper" (swiper :type git :flavor melpa :files ("swiper.el" "swiper-pkg.el") :host github :repo "abo-abo/swiper") "ivy" (ivy :type git :flavor melpa :files (:defaults (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "doc/ivy-help.org" "ivy-pkg.el") :host github :repo "abo-abo/swiper") "perspective" (perspective :type git :flavor melpa :host github :repo "nex3/perspective-el") "all-the-icons" (all-the-icons :type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el") "memoize" (memoize :type git :flavor melpa :host github :repo "skeeto/emacs-memoize") "all-the-icons-dired" (all-the-icons-dired :type git :flavor melpa :host github :repo "jtbm37/all-the-icons-dired") "pdf-tools" (pdf-tools :type git :flavor melpa :files ("lisp/*.el" "README" ("build" "Makefile") ("build" "server") (:exclude "lisp/tablist.el" "lisp/tablist-filter.el") "pdf-tools-pkg.el") :host github :repo "politza/pdf-tools") "tablist" (tablist :type git :flavor melpa :host github :repo "politza/tablist") "dired-hacks-utils" (dired-hacks-utils :type git :flavor melpa :files ("dired-hacks-utils.el" "dired-hacks-utils-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-filter" (dired-filter :type git :flavor melpa :files ("dired-filter.el" "dired-filter-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-rainbow" (dired-rainbow :type git :flavor melpa :files ("dired-rainbow.el" "dired-rainbow-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-narrow" (dired-narrow :type git :flavor melpa :files ("dired-narrow.el" "dired-narrow-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-collapse" (dired-collapse :type git :flavor melpa :files ("dired-collapse.el" "dired-collapse-pkg.el") :host github :repo "Fuco1/dired-hacks") "nov" (nov :type git :flavor melpa :repo "https://depp.brause.cc/nov.el.git") "esxml" (esxml :type git :flavor melpa :files ("esxml.el" "esxml-query.el" "esxml-pkg.el") :host github :repo "tali713/esxml") "elfeed" (elfeed :type git :flavor melpa :host github :repo "skeeto/elfeed") "elfeed-org" (elfeed-org :type git :flavor melpa :host github :repo "remyhonig/elfeed-org") "emms" (emms :type git :flavor melpa :files ("*.el" "lisp/*.el" "doc/emms.texinfo" "emms-pkg.el") :repo "https://git.savannah.gnu.org/git/emms.git") "mu4e" nil "dashboard" (dashboard :type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard") "page-break-lines" (page-break-lines :type git :flavor melpa :host github :repo "purcell/page-break-lines") "which-key" (which-key :type git :flavor melpa :host github :repo "justbur/emacs-which-key") "magit" (magit :type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit") "git-commit" (git-commit :type git :flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :host github :repo "magit/magit") "transient" (transient :type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient") "with-editor" (with-editor :type git :flavor melpa :host github :repo "magit/with-editor") "magit-todos" (magit-todos :type git :flavor melpa :host github :repo "alphapapa/magit-todos") "hl-todo" (hl-todo :type git :flavor melpa :host github :repo "tarsius/hl-todo") "pcre2el" (pcre2el :type git :flavor melpa :files ("pcre2el.el" "pcre2el-pkg.el") :host github :repo "joddie/pcre2el") "engine-mode" (engine-mode :type git :flavor melpa :host github :repo "hrs/engine-mode") "yasnippet-snippets" (yasnippet-snippets :type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets") "helm-c-yasnippet" (helm-c-yasnippet :type git :flavor melpa :host github :repo "emacs-jp/helm-c-yasnippet") "org-super-agenda" (org-super-agenda :type git :flavor melpa :host github :repo "alphapapa/org-super-agenda") "ht" (ht :type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el") "ts" (ts :type git :flavor melpa :host github :repo "alphapapa/ts.el") "deft" (deft :type git :flavor melpa :host github :repo "jrblevin/deft") "org-roam" (org-roam :type git :flavor melpa :host github :repo "org-roam/org-roam") "emacsql" (emacsql :type git :flavor melpa :files ("emacsql.el" "emacsql-compiler.el" "emacsql-system.el" "README.md" "emacsql-pkg.el") :host github :repo "skeeto/emacsql") "emacsql-sqlite3" (emacsql-sqlite3 :type git :flavor melpa :host github :repo "cireu/emacsql-sqlite3") "org-roam-bibtex" (org-roam-bibtex :type git :flavor melpa :host github :repo "org-roam/org-roam-bibtex") "org-ref" (org-ref :type git :flavor melpa :files (:defaults "org-ref.org" "org-ref.bib" "citeproc" "org-ref-pkg.el") :host github :repo "jkitchin/org-ref") "htmlize" (htmlize :type git :flavor melpa :host github :repo "hniksic/emacs-htmlize") "key-chord" (key-chord :type git :flavor melpa :host github :repo "emacsorphanage/key-chord") "org-noter" (org-noter :type git :flavor melpa :host github :repo "weirdNox/org-noter") "org-journal" (org-journal :type git :flavor melpa :host github :repo "bastibe/org-journal") "ring" nil "org-cliplink" (org-cliplink :type git :flavor melpa :host github :repo "rexim/org-cliplink"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil "tramp" (tramp :type git :host github :repo "emacs-straight/tramp" :files ("*" (:exclude ".git"))) "let-alist" (let-alist :type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git"))) "seq" nil "info+" nil "mu4e" nil "ring" nil)) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "cl-lib" nil "seq" nil "info+" (info+ :type git :host github :repo "emacsmirror/info-plus") "mu4e" (mu4e :type git :host github :repo "emacsmirror/mu4e") "ring" nil))))
+(fn &optional ARG)" t nil) (autoload 'dired-subtree-down "dired-subtree" "Jump down one directory.
 
-("org-elpa" "melpa" "gnu-elpa-mirror" "emacsmirror-mirror" "straight" "use-package" "ring" "monokai-theme" "tramp" "helm-tramp" "exec-path-from-shell" "helm" "helm-projectile" "helm-descbinds" "helm-bibtex" "hydra" "helpful" "info+" "projectile" "counsel-projectile" "perspective" "all-the-icons" "all-the-icons-dired" "company" "pdf-tools" "dired-hacks-utils" "dired-filter" "dired-rainbow" "dired-narrow" "dired-collapse" "nov" "elfeed" "elfeed-org" "emms" "mu4e" "dashboard" "which-key" "magit" "magit-todos" "engine-mode" "yasnippet" "yasnippet-snippets" "helm-c-yasnippet" "org" "org-super-agenda" "deft" "org-roam" "org-roam-bibtex" "org-ref" "org-noter" "org-journal" "org-cliplink" "editorconfig" "elpy")
+(fn &optional ARG)" t nil) (autoload 'dired-subtree-next-sibling "dired-subtree" "Go to the next sibling.
+
+(fn &optional ARG)" t nil) (autoload 'dired-subtree-previous-sibling "dired-subtree" "Go to the previous sibling.
+
+(fn &optional ARG)" t nil) (autoload 'dired-subtree-beginning "dired-subtree" "Go to the first file in this subtree." t nil) (autoload 'dired-subtree-end "dired-subtree" "Go to the first file in this subtree." t nil) (autoload 'dired-subtree-mark-subtree "dired-subtree" "Mark all files in this subtree.
+
+With prefix argument mark all the files in subdirectories
+recursively.
+
+(fn &optional ALL)" t nil) (autoload 'dired-subtree-unmark-subtree "dired-subtree" "Unmark all files in this subtree.
+
+With prefix argument unmark all the files in subdirectories
+recursively.
+
+(fn &optional ALL)" t nil) (autoload 'dired-subtree-revert "dired-subtree" "Revert the subtree.
+
+This means reinserting the content of this subtree and all its
+children." t nil) (autoload 'dired-subtree-insert "dired-subtree" "Insert subtree under this directory." t nil) (autoload 'dired-subtree-remove "dired-subtree" "Remove subtree at point." t nil) (autoload 'dired-subtree-toggle "dired-subtree" "Insert subtree at point or remove it if it was not present." t nil) (autoload 'dired-subtree-cycle "dired-subtree" "Org-mode like cycle visibility:
+
+1) Show subtree
+2) Show subtree recursively (if previous command was cycle)
+3) Remove subtree
+
+Numeric prefix will set max depth
+
+(fn &optional MAX-DEPTH)" t nil) (autoload 'dired-subtree-only-this-file "dired-subtree" "Remove all the siblings on the route from this file to the top-most directory.
+
+With ARG non-nil, do not remove expanded directories in parents.
+
+(fn &optional ARG)" t nil) (autoload 'dired-subtree-only-this-directory "dired-subtree" "Remove all the siblings on the route from this directory to the top-most directory.
+
+With ARG non-nil, do not remove expanded directories in parents.
+
+(fn &optional ARG)" t nil) (autoload 'dired-subtree-apply-filter "dired-subtree" "Push a local filter for this subtree.
+
+This depends on `dired-filter' package.
+
+It works exactly the same as global dired filters, only
+restricted to a subtree.  The global filter is also applied to
+the subtree.  The filter action is read from `dired-filter-map'." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dired-subtree" '("dired-"))) (provide 'dired-subtree-autoloads)) "dired-sidebar" ((dired-sidebar dired-sidebar-autoloads) (autoload 'dired-sidebar-toggle-sidebar "dired-sidebar" "Toggle the project explorer window.
+Optional argument DIR Use DIR as sidebar root if available.
+
+With universal argument, use current directory.
+
+(fn &optional DIR)" t nil) (autoload 'dired-sidebar-toggle-with-current-directory "dired-sidebar" "Like `dired-sidebar-toggle-sidebar' but use current-directory." t nil) (autoload 'dired-sidebar-show-sidebar "dired-sidebar" "Show sidebar displaying buffer B.
+
+(fn &optional B)" t nil) (autoload 'dired-sidebar-hide-sidebar "dired-sidebar" "Hide the sidebar in the selected frame." t nil) (autoload 'dired-sidebar-jump-to-sidebar "dired-sidebar" "Jump to `dired-sidebar' buffer if it is showing.
+
+If it's not showing, act as `dired-sidebar-toggle-sidebar'." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dired-sidebar" '("dired-sidebar-"))) (provide 'dired-sidebar-autoloads)) "avy" ((avy-autoloads avy) (autoload 'avy-process "avy" "Select one of CANDIDATES using `avy-read'.
+Use OVERLAY-FN to visualize the decision overlay.
+CLEANUP-FN should take no arguments and remove the effects of
+multiple OVERLAY-FN invocations.
+
+(fn CANDIDATES &optional OVERLAY-FN CLEANUP-FN)" nil nil) (autoload 'avy-goto-char "avy" "Jump to the currently visible CHAR.
+The window scope is determined by `avy-all-windows' (ARG negates it).
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-char-in-line "avy" "Jump to the currently visible CHAR in the current line.
+
+(fn CHAR)" t nil) (autoload 'avy-goto-char-2 "avy" "Jump to the currently visible CHAR1 followed by CHAR2.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+BEG and END narrow the scope where candidates are searched.
+
+(fn CHAR1 CHAR2 &optional ARG BEG END)" t nil) (autoload 'avy-goto-char-2-above "avy" "Jump to the currently visible CHAR1 followed by CHAR2.
+This is a scoped version of `avy-goto-char-2', where the scope is
+the visible part of the current buffer up to point.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR1 CHAR2 &optional ARG)" t nil) (autoload 'avy-goto-char-2-below "avy" "Jump to the currently visible CHAR1 followed by CHAR2.
+This is a scoped version of `avy-goto-char-2', where the scope is
+the visible part of the current buffer following point.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR1 CHAR2 &optional ARG)" t nil) (autoload 'avy-isearch "avy" "Jump to one of the current isearch candidates." t nil) (autoload 'avy-goto-word-0 "avy" "Jump to a word start.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+BEG and END narrow the scope where candidates are searched.
+
+(fn ARG &optional BEG END)" t nil) (autoload 'avy-goto-whitespace-end "avy" "Jump to the end of a whitespace sequence.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+BEG and END narrow the scope where candidates are searched.
+
+(fn ARG &optional BEG END)" t nil) (autoload 'avy-goto-word-1 "avy" "Jump to the currently visible CHAR at a word start.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+BEG and END narrow the scope where candidates are searched.
+When SYMBOL is non-nil, jump to symbol start instead of word start.
+
+(fn CHAR &optional ARG BEG END SYMBOL)" t nil) (autoload 'avy-goto-word-1-above "avy" "Jump to the currently visible CHAR at a word start.
+This is a scoped version of `avy-goto-word-1', where the scope is
+the visible part of the current buffer up to point.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-word-1-below "avy" "Jump to the currently visible CHAR at a word start.
+This is a scoped version of `avy-goto-word-1', where the scope is
+the visible part of the current buffer following point.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-symbol-1 "avy" "Jump to the currently visible CHAR at a symbol start.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-symbol-1-above "avy" "Jump to the currently visible CHAR at a symbol start.
+This is a scoped version of `avy-goto-symbol-1', where the scope is
+the visible part of the current buffer up to point.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-symbol-1-below "avy" "Jump to the currently visible CHAR at a symbol start.
+This is a scoped version of `avy-goto-symbol-1', where the scope is
+the visible part of the current buffer following point.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-subword-0 "avy" "Jump to a word or subword start.
+The window scope is determined by `avy-all-windows' (ARG negates it).
+
+When PREDICATE is non-nil it's a function of zero parameters that
+should return true.
+
+BEG and END narrow the scope where candidates are searched.
+
+(fn &optional ARG PREDICATE BEG END)" t nil) (autoload 'avy-goto-subword-1 "avy" "Jump to the currently visible CHAR at a subword start.
+The window scope is determined by `avy-all-windows' (ARG negates it).
+The case of CHAR is ignored.
+
+(fn CHAR &optional ARG)" t nil) (autoload 'avy-goto-word-or-subword-1 "avy" "Forward to `avy-goto-subword-1' or `avy-goto-word-1'.
+Which one depends on variable `subword-mode'." t nil) (autoload 'avy-goto-line "avy" "Jump to a line start in current buffer.
+
+When ARG is 1, jump to lines currently visible, with the option
+to cancel to `goto-line' by entering a number.
+
+When ARG is 4, negate the window scope determined by
+`avy-all-windows'.
+
+Otherwise, forward to `goto-line' with ARG.
+
+(fn &optional ARG)" t nil) (autoload 'avy-goto-line-above "avy" "Goto visible line above the cursor.
+OFFSET changes the distance between the closest key to the cursor and
+the cursor
+When BOTTOM-UP is non-nil, display avy candidates from top to bottom
+
+(fn &optional OFFSET BOTTOM-UP)" t nil) (autoload 'avy-goto-line-below "avy" "Goto visible line below the cursor.
+OFFSET changes the distance between the closest key to the cursor and
+the cursor
+When BOTTOM-UP is non-nil, display avy candidates from top to bottom
+
+(fn &optional OFFSET BOTTOM-UP)" t nil) (autoload 'avy-goto-end-of-line "avy" "Call `avy-goto-line' and move to the end of the line.
+
+(fn &optional ARG)" t nil) (autoload 'avy-copy-line "avy" "Copy a selected line above the current line.
+ARG lines can be used.
+
+(fn ARG)" t nil) (autoload 'avy-move-line "avy" "Move a selected line above the current line.
+ARG lines can be used.
+
+(fn ARG)" t nil) (autoload 'avy-copy-region "avy" "Select two lines and copy the text between them to point.
+
+The window scope is determined by `avy-all-windows' or
+`avy-all-windows-alt' when ARG is non-nil.
+
+(fn ARG)" t nil) (autoload 'avy-move-region "avy" "Select two lines and move the text between them above the current line." t nil) (autoload 'avy-kill-region "avy" "Select two lines and kill the region between them.
+
+The window scope is determined by `avy-all-windows' or
+`avy-all-windows-alt' when ARG is non-nil.
+
+(fn ARG)" t nil) (autoload 'avy-kill-ring-save-region "avy" "Select two lines and save the region between them to the kill ring.
+The window scope is determined by `avy-all-windows'.
+When ARG is non-nil, do the opposite of `avy-all-windows'.
+
+(fn ARG)" t nil) (autoload 'avy-kill-whole-line "avy" "Select line and kill the whole selected line.
+
+With a numerical prefix ARG, kill ARG line(s) starting from the
+selected line.  If ARG is negative, kill backward.
+
+If ARG is zero, kill the selected line but exclude the trailing
+newline.
+
+\\[universal-argument] 3 \\[avy-kil-whole-line] kill three lines
+starting from the selected line.  \\[universal-argument] -3
+
+\\[avy-kill-whole-line] kill three lines backward including the
+selected line.
+
+(fn ARG)" t nil) (autoload 'avy-kill-ring-save-whole-line "avy" "Select line and save the whole selected line as if killed, but don\342\200\231t kill it.
+
+This command is similar to `avy-kill-whole-line', except that it
+saves the line(s) as if killed, but does not kill it(them).
+
+With a numerical prefix ARG, kill ARG line(s) starting from the
+selected line.  If ARG is negative, kill backward.
+
+If ARG is zero, kill the selected line but exclude the trailing
+newline.
+
+(fn ARG)" t nil) (autoload 'avy-setup-default "avy" "Setup the default shortcuts." nil nil) (autoload 'avy-goto-char-timer "avy" "Read one or many consecutive chars and jump to the first one.
+The window scope is determined by `avy-all-windows' (ARG negates it).
+
+(fn &optional ARG)" t nil) (autoload 'avy-transpose-lines-in-region "avy" "Transpose lines in the active region." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "avy" '("avy-"))) (provide 'avy-autoloads)) "ace-window" ((ace-window-autoloads ace-window) (autoload 'ace-select-window "ace-window" "Ace select window." t nil) (autoload 'ace-delete-window "ace-window" "Ace delete window." t nil) (autoload 'ace-swap-window "ace-window" "Ace swap window." t nil) (autoload 'ace-delete-other-windows "ace-window" "Ace delete other windows." t nil) (autoload 'ace-display-buffer "ace-window" "Make `display-buffer' and `pop-to-buffer' select using `ace-window'.
+See sample config for `display-buffer-base-action' and `display-buffer-alist':
+https://github.com/abo-abo/ace-window/wiki/display-buffer.
+
+(fn BUFFER ALIST)" nil nil) (autoload 'ace-window "ace-window" "Select a window.
+Perform an action based on ARG described below.
+
+By default, behaves like extended `other-window'.
+See `aw-scope' which extends it to work with frames.
+
+Prefixed with one \\[universal-argument], does a swap between the
+selected window and the current window, so that the selected
+buffer moves to current window (and current buffer moves to
+selected window).
+
+Prefixed with two \\[universal-argument]'s, deletes the selected
+window.
+
+(fn ARG)" t nil) (defvar ace-window-display-mode nil "Non-nil if Ace-Window-Display mode is enabled.
+See the `ace-window-display-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `ace-window-display-mode'.") (custom-autoload 'ace-window-display-mode "ace-window" nil) (autoload 'ace-window-display-mode "ace-window" "Minor mode for showing the ace window key in the mode line.
+
+If called interactively, enable Ace-Window-Display mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
+(fn &optional ARG)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ace-window" '("ace-window-mode" "aw-"))) (provide 'ace-window-autoloads)) "pfuture" ((pfuture pfuture-autoloads) (autoload 'pfuture-new "pfuture" "Create a new future process for command CMD.
+Any arguments after the command are interpreted as arguments to the command.
+This will return a process object with additional 'stderr and 'stdout
+properties, which can be read via (process-get process 'stdout) and
+(process-get process 'stderr) or alternatively with
+(pfuture-result process) or (pfuture-stderr process).
+
+Note that CMD must be a *sequence* of strings, meaning
+this is wrong: (pfuture-new \"git status\")
+this is right: (pfuture-new \"git\" \"status\")
+
+(fn &rest CMD)" nil nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pfuture" '("pfuture-"))) (provide 'pfuture-autoloads)) "posframe" ((posframe-autoloads posframe) (autoload 'posframe-workable-p "posframe" "Test posframe workable status." nil nil) (autoload 'posframe-show "posframe" "Pop up a posframe and show STRING at POSITION.
+
+POSITION can be:
+1. An integer, meaning point position.
+2. A cons of two integers, meaning absolute X and Y coordinates.
+3. Other type, in which case the corresponding POSHANDLER should be
+   provided.
+
+POSHANDLER is a function of one argument returning an actual
+position.  Its argument is a plist of the following form:
+
+  (:position xxx
+   :position-info xxx
+   :poshandler xxx
+   :font-height xxx
+   :font-width xxx
+   :posframe xxx
+   :posframe-width xxx
+   :posframe-height xxx
+   :posframe-buffer xxx
+   :parent-frame xxx
+   :parent-window-left xxx
+   :parent-window-top xxx
+   :parent-frame-width xxx
+   :parent-frame-height xxx
+   :parent-window xxx
+   :parent-window-width  xxx
+   :parent-window-height xxx
+   :minibuffer-height xxx
+   :mode-line-height  xxx
+   :header-line-height xxx
+   :tab-line-height xxx
+   :x-pixel-offset xxx
+   :y-pixel-offset xxx)
+
+By default, poshandler is auto-selected based on the type of POSITION,
+but the selection can be overridden using the POSHANDLER argument.
+The builtin poshandler functions are listed below:
+
+1.  `posframe-poshandler-frame-center'
+2.  `posframe-poshandler-frame-top-center'
+3.  `posframe-poshandler-frame-top-left-corner'
+4.  `posframe-poshandler-frame-top-right-corner'
+5.  `posframe-poshandler-frame-bottom-center'
+6.  `posframe-poshandler-frame-bottom-left-corner'
+7.  `posframe-poshandler-frame-bottom-right-corner'
+8.  `posframe-poshandler-window-center'
+9.  `posframe-poshandler-window-top-center'
+10. `posframe-poshandler-window-top-left-corner'
+11. `posframe-poshandler-window-top-right-corner'
+12. `posframe-poshandler-window-bottom-center'
+13. `posframe-poshandler-window-bottom-left-corner'
+14. `posframe-poshandler-window-bottom-right-corner'
+15. `posframe-poshandler-point-top-left-corner'
+16. `posframe-poshandler-point-bottom-left-corner'
+17. `posframe-poshandler-point-bottom-left-corner-upward'
+
+This posframe's buffer is BUFFER-OR-NAME, which can be a buffer
+or a name of a (possibly nonexistent) buffer.
+
+If NO-PROPERTIES is non-nil, The STRING's properties will
+be removed before being shown in posframe.
+
+WIDTH, MIN-WIDTH, HEIGHT and MIN-HEIGHT, specify bounds on the
+new total size of posframe.  MIN-HEIGHT and MIN-WIDTH default to
+the values of \342\200\230window-min-height\342\200\231 and \342\200\230window-min-width\342\200\231
+respectively.  These arguments are specified in the canonical
+character width and height of posframe.
+
+If LEFT-FRINGE or RIGHT-FRINGE is a number, left fringe or
+right fringe with be shown with the specified width.
+
+By default, posframe shows no borders, but users can specify
+borders by setting INTERNAL-BORDER-WIDTH to a positive number.
+Border color can be specified by INTERNAL-BORDER-COLOR
+or via the \342\200\230internal-border\342\200\231 face.
+
+Posframe's font as well as foreground and background colors are
+derived from the current frame by default, but can be overridden
+using the FONT, FOREGROUND-COLOR and BACKGROUND-COLOR arguments,
+respectively.
+
+By default, posframe will display no header-line, mode-line and
+tab-line.  In case a header-line, mode-line or tab-line is
+desired, users can set RESPECT-HEADER-LINE and RESPECT-MODE-LINE
+to t.
+
+INITIALIZE is a function with no argument.  It will run when
+posframe buffer is first selected with `with-current-buffer'
+in `posframe-show', and only run once (for performance reasons).
+
+If LINES-TRUNCATE is non-nil, then lines will truncate in the
+posframe instead of wrap.
+
+OVERRIDE-PARAMETERS is very powful, *all* the frame parameters
+used by posframe's frame can be overridden by it.
+
+TIMEOUT can specify the number of seconds after which the posframe
+will auto-hide.
+
+If REFRESH is a number, posframe's frame-size will be re-adjusted
+every REFRESH seconds.
+
+When ACCEPT-FOCUS is non-nil, posframe will accept focus.
+be careful, you may face some bugs when set it to non-nil.
+
+HIDEHANDLER is a function, when it return t, posframe will be
+hide when `post-command-hook' is executed, this function has a
+plist argument:
+
+  (:posframe-buffer xxx
+   :posframe-parent-buffer xxx)
+
+The builtin hidehandler functions are listed below:
+
+1. `posframe-hidehandler-when-buffer-switch'
+
+
+You can use `posframe-delete-all' to delete all posframes.
+
+(fn BUFFER-OR-NAME &key STRING POSITION POSHANDLER WIDTH HEIGHT MIN-WIDTH MIN-HEIGHT X-PIXEL-OFFSET Y-PIXEL-OFFSET LEFT-FRINGE RIGHT-FRINGE INTERNAL-BORDER-WIDTH INTERNAL-BORDER-COLOR FONT FOREGROUND-COLOR BACKGROUND-COLOR RESPECT-HEADER-LINE RESPECT-MODE-LINE INITIALIZE NO-PROPERTIES KEEP-RATIO LINES-TRUNCATE OVERRIDE-PARAMETERS TIMEOUT REFRESH ACCEPT-FOCUS HIDEHANDLER &allow-other-keys)" nil nil) (autoload 'posframe-hide-all "posframe" "Hide all posframe frames." t nil) (autoload 'posframe-delete-all "posframe" "Delete all posframe frames and buffers." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "posframe" '("posframe-"))) (provide 'posframe-autoloads)) "cfrs" ((cfrs cfrs-autoloads) (autoload 'cfrs-read "cfrs" "Read a string using a pos-frame with given PROMPT and INITIAL-INPUT.
+
+(fn PROMPT &optional INITIAL-INPUT)" nil nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cfrs" '("cfrs-"))) (provide 'cfrs-autoloads)) "treemacs" ((treemacs-hydras treemacs-faces treemacs-mode treemacs treemacs-fringe-indicator treemacs-bookmarks treemacs-customization treemacs-macros treemacs-logging treemacs-icons treemacs-filewatch-mode treemacs-diagnostics treemacs-compatibility treemacs-rendering treemacs-visuals treemacs-workspaces treemacs-core-utils treemacs-tags treemacs-interface treemacs-mouse-interface treemacs-autoloads treemacs-extensions treemacs-themes treemacs-tag-follow-mode treemacs-scope treemacs-persistence treemacs-dom treemacs-header-line treemacs-async treemacs-follow-mode) (autoload 'treemacs-version "treemacs" "Return the `treemacs-version'." t nil) (autoload 'treemacs "treemacs" "Initialise or toggle treemacs.
+* If the treemacs window is visible hide it.
+* If a treemacs buffer exists, but is not visible show it.
+* If no treemacs buffer exists for the current frame create and show it.
+* If the workspace is empty additionally ask for the root path of the first
+  project to add." t nil) (autoload 'treemacs-find-file "treemacs" "Find and focus the current file in the treemacs window.
+If the current buffer has visits no file or with a prefix ARG ask for the
+file instead.
+Will show/create a treemacs buffers if it is not visible/does not exist.
+For the most part only useful when `treemacs-follow-mode' is not active.
+
+(fn &optional ARG)" t nil) (autoload 'treemacs-find-tag "treemacs" "Find and move point to the tag at point in the treemacs view.
+Most likely to be useful when `treemacs-tag-follow-mode' is not active.
+
+Will ask to change the treemacs root if the file to find is not under the
+root.  If no treemacs buffer exists it will be created with the current file's
+containing directory as root.  Will do nothing if the current buffer is not
+visiting a file or Emacs cannot find any tags for the current file." t nil) (autoload 'treemacs-select-window "treemacs" "Select the treemacs window if it is visible.
+Bring it to the foreground if it is not visible.
+Initialise a new treemacs buffer as calling `treemacs' would if there is no
+treemacs buffer for this frame." t nil) (autoload 'treemacs-show-changelog "treemacs" "Show the changelog of treemacs." t nil) (autoload 'treemacs-edit-workspaces "treemacs" "Edit your treemacs workspaces and projects as an `org-mode' file." t nil) (autoload 'treemacs-display-current-project-exclusively "treemacs" "Display the current project, and *only* the current project.
+Like `treemacs-add-and-display-current-project' this will add the current
+project to treemacs based on either projectile or the built-in project.el.
+However the 'exclusive' part means that it will make the current project the
+only project, all other projects *will be removed* from the current workspace." t nil) (autoload 'treemacs-add-and-display-current-project "treemacs" "Open treemacs and add the current project root to the workspace.
+The project is determined first by projectile (if treemacs-projectile is
+installed), then by project.el.
+If the project is already registered with treemacs just move point to its root.
+An error message is displayed if the current buffer is not part of any project." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs" '("treemacs-version"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-async" '("treemacs-"))) (autoload 'treemacs-bookmark "treemacs-bookmarks" "Find a bookmark in treemacs.
+Only bookmarks marking either a file or a directory are offered for selection.
+Treemacs will try to find and focus the given bookmark's location, in a similar
+fashion to `treemacs-find-file'.
+
+With a prefix argument ARG treemacs will also open the bookmarked location.
+
+(fn &optional ARG)" t nil) (autoload 'treemacs--bookmark-handler "treemacs-bookmarks" "Open Treemacs into a bookmark RECORD.
+
+(fn RECORD)" nil nil) (autoload 'treemacs-add-bookmark "treemacs-bookmarks" "Add the current node to Emacs' list of bookmarks.
+For file and directory nodes their absolute path is saved.  Tag nodes
+additionally also save the tag's position.  A tag can only be bookmarked if the
+treemacs node is pointing to a valid buffer position." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-bookmarks" '("treemacs--"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-compatibility" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-core-utils" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-customization" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-diagnostics" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-dom" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-extensions" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-filewatch-mode" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-follow-mode" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-fringe-indicator" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-header-line" '("treemacs-header-buttons-format"))) (autoload 'treemacs-common-helpful-hydra "treemacs-hydras" "Summon a helpful hydra to show you the treemacs keymap.
+
+This hydra will show the most commonly used keybinds for treemacs.  For the more
+advanced (probably rarely used keybinds) see `treemacs-advanced-helpful-hydra'.
+
+The keybinds shown in this hydra are not static, but reflect the actual
+keybindings currently in use (including evil mode).  If the hydra is unable to
+find the key a command is bound to it will show a blank instead." t nil) (autoload 'treemacs-advanced-helpful-hydra "treemacs-hydras" "Summon a helpful hydra to show you the treemacs keymap.
+
+This hydra will show the more advanced (rarely used) keybinds for treemacs.  For
+the more commonly used keybinds see `treemacs-common-helpful-hydra'.
+
+The keybinds shown in this hydra are not static, but reflect the actual
+keybindings currently in use (including evil mode).  If the hydra is unable to
+find the key a command is bound to it will show a blank instead." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-hydras" '("treemacs-helpful-hydra"))) (autoload 'treemacs-resize-icons "treemacs-icons" "Resize the current theme's icons to the given SIZE.
+
+If SIZE is 'nil' the icons are not resized and will retain their default size of
+22 pixels.
+
+There is only one size, the icons are square and the aspect ratio will be
+preserved when resizing them therefore width and height are the same.
+
+Resizing the icons only works if Emacs was built with ImageMagick support, or if
+using Emacs >= 27.1,which has native image resizing support.  If this is not the
+case this function will not have any effect.
+
+Custom icons are not taken into account, only the size of treemacs' own icons
+png are changed.
+
+(fn SIZE)" t nil) (autoload 'treemacs-define-custom-icon "treemacs-icons" "Define a custom ICON for the current theme to use for FILE-EXTENSIONS.
+
+Note that treemacs has a very loose definition of what constitutes a file
+extension - it's either everything past the last period, or just the file's full
+name if there is no period.  This makes it possible to match file names like
+'.gitignore' and 'Makefile'.
+
+Additionally FILE-EXTENSIONS are also not case sensitive and will be stored in a
+down-cased state.
+
+(fn ICON &rest FILE-EXTENSIONS)" nil nil) (autoload 'treemacs-map-icons-with-auto-mode-alist "treemacs-icons" "Remaps icons for EXTENSIONS according to `auto-mode-alist'.
+EXTENSIONS should be a list of file extensions such that they match the regex
+stored in `auto-mode-alist', for example '(\".cc\").
+MODE-ICON-ALIST is an alist that maps which mode from `auto-mode-alist' should
+be assigned which treemacs icon, for example
+'((c-mode . treemacs-icon-c)
+  (c++-mode . treemacs-icon-cpp))
+
+(fn EXTENSIONS MODE-ICON-ALIST)" nil nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-icons" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-interface" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-logging" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-macros" '("treemacs-"))) (autoload 'treemacs-mode "treemacs-mode" "A major mode for displaying the file system in a tree layout.
+
+(fn)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-mode" '("treemacs--"))) (autoload 'treemacs-leftclick-action "treemacs-mouse-interface" "Move focus to the clicked line.
+Must be bound to a mouse click, or EVENT will not be supplied.
+
+(fn EVENT)" t nil) (autoload 'treemacs-doubleclick-action "treemacs-mouse-interface" "Run the appropriate double-click action for the current node.
+In the default configuration this means to do the same as `treemacs-RET-action'.
+
+This function's exact configuration is stored in
+`treemacs-doubleclick-actions-config'.
+
+Must be bound to a mouse click, or EVENT will not be supplied.
+
+(fn EVENT)" t nil) (autoload 'treemacs-single-click-expand-action "treemacs-mouse-interface" "A modified single-leftclick action that expands the clicked nodes.
+Can be bound to <mouse1> if you prefer to expand nodes with a single click
+instead of a double click.  Either way it must be bound to a mouse click, or
+EVENT will not be supplied.
+
+Clicking on icons will expand a file's tags, just like
+`treemacs-leftclick-action'.
+
+(fn EVENT)" t nil) (autoload 'treemacs-dragleftclick-action "treemacs-mouse-interface" "Drag a file/dir node to be opened in a window.
+Must be bound to a mouse click, or EVENT will not be supplied.
+
+(fn EVENT)" t nil) (autoload 'treemacs-node-buffer-and-position "treemacs-mouse-interface" "Return source buffer or list of buffer and position for the current node.
+This information can be used for future display.  Stay in the selected window
+and ignore any prefix argument.
+
+(fn &optional _)" t nil) (autoload 'treemacs-rightclick-menu "treemacs-mouse-interface" "Show a contextual right click menu based on click EVENT.
+
+(fn EVENT)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-mouse-interface" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-persistence" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-rendering" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-scope" '("treemacs-"))) (defvar treemacs-tag-follow-mode nil "Non-nil if Treemacs-Tag-Follow mode is enabled.
+See the `treemacs-tag-follow-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `treemacs-tag-follow-mode'.") (custom-autoload 'treemacs-tag-follow-mode "treemacs-tag-follow-mode" nil) (autoload 'treemacs-tag-follow-mode "treemacs-tag-follow-mode" "Toggle `treemacs-tag-follow-mode'.
+
+If called interactively, enable Treemacs-Tag-Follow mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
+
+This acts as more fine-grained alternative to `treemacs-follow-mode' and will
+thus disable `treemacs-follow-mode' on activation. When enabled treemacs will
+focus not only the file of the current buffer, but also the tag at point.
+
+The follow action is attached to Emacs' idle timer and will run
+`treemacs-tag-follow-delay' seconds of idle time. The delay value is not an
+integer, meaning it accepts floating point values like 1.5.
+
+Every time a tag is followed a rescan of the imenu index is forced by
+temporarily setting `imenu-auto-rescan' to t (though a cache is applied as long
+as the buffer is unmodified). This is necessary to assure that creation or
+deletion of tags does not lead to errors and guarantees an always up-to-date tag
+view.
+
+Note that in order to move to a tag in treemacs the treemacs buffer's window
+needs to be temporarily selected, which will reset `blink-cursor-mode's timer if
+it is enabled. This will result in the cursor blinking seemingly pausing for a
+short time and giving the appereance of the tag follow action lasting much
+longer than it really does.
+
+(fn &optional ARG)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-tag-follow-mode" '("treemacs--"))) (autoload 'treemacs--expand-file-node "treemacs-tags" "Open tag items for file BTN.
+Recursively open all tags below BTN when RECURSIVE is non-nil.
+
+(fn BTN &optional RECURSIVE)" nil nil) (autoload 'treemacs--collapse-file-node "treemacs-tags" "Close node given by BTN.
+Remove all open tag entries under BTN when RECURSIVE.
+
+(fn BTN &optional RECURSIVE)" nil nil) (autoload 'treemacs--visit-or-expand/collapse-tag-node "treemacs-tags" "Visit tag section BTN if possible, expand or collapse it otherwise.
+Pass prefix ARG on to either visit or toggle action.
+
+FIND-WINDOW is a special provision depending on this function's invocation
+context and decides whether to find the window to display in (if the tag is
+visited instead of the node being expanded).
+
+On the one hand it can be called based on `treemacs-RET-actions-config' (or
+TAB).  The functions in these configs are expected to find the windows they need
+to display in themselves, so FIND-WINDOW must be t. On the other hand this
+function is also called from the top level vist-node functions like
+`treemacs-visit-node-vertical-split' which delegates to the
+`treemacs--execute-button-action' macro which includes the determination of
+the display window.
+
+(fn BTN ARG FIND-WINDOW)" nil nil) (autoload 'treemacs--expand-tag-node "treemacs-tags" "Open tags node items for BTN.
+Open all tag section under BTN when call is RECURSIVE.
+
+(fn BTN &optional RECURSIVE)" nil nil) (autoload 'treemacs--collapse-tag-node "treemacs-tags" "Close tags node at BTN.
+Remove all open tag entries under BTN when RECURSIVE.
+
+(fn BTN &optional RECURSIVE)" nil nil) (autoload 'treemacs--goto-tag "treemacs-tags" "Go to the tag at BTN.
+
+(fn BTN)" nil nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-tags" '("treemacs--"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-themes" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-visuals" '("treemacs-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-workspaces" '("treemacs-"))) (provide 'treemacs-autoloads)) "goto-chg" ((goto-chg-autoloads goto-chg) (autoload 'goto-last-change "goto-chg" "Go to the point where the last edit was made in the current buffer.
+Repeat the command to go to the second last edit, etc.
+
+To go back to more recent edit, the reverse of this command, use \\[goto-last-change-reverse]
+or precede this command with \\[universal-argument] - (minus).
+
+It does not go to the same point twice even if there has been many edits
+there. I call the minimal distance between distinguishable edits \"span\".
+Set variable `glc-default-span' to control how close is \"the same point\".
+Default span is 8.
+The span can be changed temporarily with \\[universal-argument] right before \\[goto-last-change]:
+\\[universal-argument] <NUMBER> set current span to that number,
+\\[universal-argument] (no number) multiplies span by 4, starting with default.
+The so set span remains until it is changed again with \\[universal-argument], or the consecutive
+repetition of this command is ended by any other command.
+
+When span is zero (i.e. \\[universal-argument] 0) subsequent \\[goto-last-change] visits each and
+every point of edit and a message shows what change was made there.
+In this case it may go to the same point twice.
+
+This command uses undo information. If undo is disabled, so is this command.
+At times, when undo information becomes too large, the oldest information is
+discarded. See variable `undo-limit'.
+
+(fn ARG)" t nil) (autoload 'goto-last-change-reverse "goto-chg" "Go back to more recent changes after \\[goto-last-change] have been used.
+See `goto-last-change' for use of prefix argument.
+
+(fn ARG)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "goto-chg" '("glc-"))) (provide 'goto-chg-autoloads)) "evil" ((evil-integration evil-ex evil-autoloads evil-repeat evil-common evil-command-window evil-macros evil-maps evil evil-pkg evil-vars evil-search evil-commands evil-digraphs evil-jumps evil-core evil-development evil-states evil-keybindings evil-types) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-command-window" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-commands" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-common" '("bounds-of-evil-" "evil-" "forward-evil-"))) (autoload 'evil-mode "evil" nil t) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-core" '("evil-" "turn-o"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-digraphs" '("evil-digraph"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-ex" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-integration" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-jumps" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-macros" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-maps" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-repeat" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-search" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-states" '("evil-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-types" '("evil-ex-get-optional-register-and-count"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "evil-vars" '("evil-"))) (provide 'evil-autoloads)) "treemacs-evil" ((treemacs-evil-autoloads treemacs-evil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-evil" '("treemacs-evil--"))) (provide 'treemacs-evil-autoloads)) "treemacs-projectile" ((treemacs-projectile-autoloads treemacs-projectile) (autoload 'treemacs-projectile "treemacs-projectile" "Add one of `projectile-known-projects' to the treemacs workspace.
+With a prefix ARG was for the name of the project instead of using the name of
+the project's root directory.
+
+(fn &optional ARG)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-projectile" '("treemacs-"))) (provide 'treemacs-projectile-autoloads)) "treemacs-icons-dired" ((treemacs-icons-dired treemacs-icons-dired-autoloads) (defvar treemacs-icons-dired-mode nil "Non-nil if Treemacs-Icons-Dired mode is enabled.
+See the `treemacs-icons-dired-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `treemacs-icons-dired-mode'.") (custom-autoload 'treemacs-icons-dired-mode "treemacs-icons-dired" nil) (autoload 'treemacs-icons-dired-mode "treemacs-icons-dired" "Display treemacs icons for each file in a dired buffer.
+
+If called interactively, enable Treemacs-Icons-Dired mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
+
+(fn &optional ARG)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-icons-dired" '("treemacs-icons-dired-"))) (provide 'treemacs-icons-dired-autoloads)) "treemacs-magit" ((treemacs-magit-autoloads treemacs-magit) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-magit" '("treemacs-magit--"))) (provide 'treemacs-magit-autoloads)) "persp-mode" ((persp-mode persp-mode-autoloads) (autoload 'persp-def-auto-persp "persp-mode" "
+
+(fn NAME &rest KEYARGS &key BUFFER-NAME FILE-NAME MODE MODE-NAME MINOR-MODE MINOR-MODE-NAME PREDICATE HOOKS DYN-ENV GET-NAME GET-BUFFER GET-PERSP SWITCH PARAMETERS NOAUTO WEAK USER-DATA ON-MATCH AFTER-MATCH DONT-PICK-UP-BUFFERS DELETE)" nil nil) (define-obsolete-function-alias 'def-auto-persp 'persp-def-auto-persp "persp-mode 2.9.6") (autoload 'persp-def-buffer-save/load "persp-mode" "
+
+(fn &rest KEYARGS &key BUFFER-NAME FILE-NAME MODE MODE-NAME MINOR-MODE MINOR-MODE-NAME PREDICATE TAG-SYMBOL SAVE-VARS SAVE-FUNCTION LOAD-FUNCTION AFTER-LOAD-FUNCTION MODE-RESTORE-FUNCTION APPEND)" nil nil) (define-obsolete-function-alias 'def-persp-buffer-save/load 'persp-def-buffer-save/load "persp-mode 2.9.6") (defvar persp-mode nil "Non-nil if Persp mode is enabled.
+See the `persp-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `persp-mode'.") (custom-autoload 'persp-mode "persp-mode" nil) (autoload 'persp-mode "persp-mode" "Toggle the persp-mode.
+When active, keeps track of multiple 'perspectives',
+named collections of buffers and window configurations.
+Here is a keymap of this minor mode:
+\\{persp-mode-map}
+
+If called interactively, enable Persp mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
+
+(fn &optional ARG)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "persp-mode" '("*persp-" "clear-window-persp" "def-" "get-" "ido-toggle-persp-filter" "persp" "safe-persp-" "set-" "window-persp-set-p" "with-persp-ido-hooks"))) (provide 'persp-mode-autoloads)) "treemacs-persp" ((treemacs-persp treemacs-persp-autoloads) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-persp" '("treemacs-persp-"))) (provide 'treemacs-persp-autoloads))))
+
+#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 1 "melpa" nil "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" nil "bind-key" nil "editorconfig" nil "cl-lib" nil "elpy" nil "company" nil "highlight-indentation" nil "pyvenv" nil "yasnippet" nil "s" nil "monokai-theme" nil "tramp" nil "helm-tramp" nil "helm" nil "async" nil "popup" nil "helm-core" nil "exec-path-from-shell" nil "helm-projectile" nil "projectile" nil "pkg-info" nil "epl" nil "helm-descbinds" nil "helm-bibtex" nil "bibtex-completion" nil "parsebib" nil "dash" nil "f" nil "biblio" nil "biblio-core" nil "let-alist" nil "seq" nil "hydra" nil "lv" nil "helpful" nil "dash-functional" nil "elisp-refs" nil "info+" nil "counsel-projectile" nil "counsel" nil "swiper" nil "ivy" nil "perspective" nil "all-the-icons" nil "memoize" nil "all-the-icons-dired" nil "pdf-tools" nil "tablist" nil "dired-hacks-utils" nil "dired-filter" nil "dired-rainbow" nil "dired-narrow" nil "dired-collapse" nil "nov" nil "esxml" nil "elfeed" nil "elfeed-org" nil "org" (org :type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org") "emms" nil "mu4e" nil "dashboard" nil "page-break-lines" nil "which-key" nil "magit" nil "git-commit" nil "transient" nil "with-editor" nil "magit-todos" nil "hl-todo" nil "pcre2el" nil "engine-mode" nil "yasnippet-snippets" nil "helm-c-yasnippet" nil "org-super-agenda" nil "ht" nil "ts" nil "deft" nil "org-roam" nil "emacsql" nil "emacsql-sqlite3" nil "org-roam-bibtex" nil "org-ref" nil "htmlize" nil "key-chord" nil "org-noter" nil "org-journal" nil "ring" nil "org-cliplink" nil "dired-sidebar" nil "dired-subtree" nil "treemacs" nil "ace-window" nil "avy" nil "pfuture" nil "cfrs" nil "posframe" nil "treemacs-evil" nil "evil" nil "goto-chg" nil "treemacs-projectile" nil "treemacs-icons-dired" nil "treemacs-magit" nil "treemacs-persp" nil "persp-mode" nil)) melpa #s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" (use-package :type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package") "bind-key" (bind-key :type git :flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :host github :repo "jwiegley/use-package") "editorconfig" (editorconfig :type git :flavor melpa :host github :repo "editorconfig/editorconfig-emacs") "cl-lib" nil "elpy" (elpy :type git :flavor melpa :files ("*.el" "NEWS.rst" "snippets" "elpy" "elpy-pkg.el") :host github :repo "jorgenschaefer/elpy") "company" (company :type git :flavor melpa :host github :repo "company-mode/company-mode") "highlight-indentation" (highlight-indentation :type git :flavor melpa :host github :repo "antonj/Highlight-Indentation-for-Emacs") "pyvenv" (pyvenv :type git :flavor melpa :host github :repo "jorgenschaefer/pyvenv") "yasnippet" (yasnippet :type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet") "s" (s :type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el") "monokai-theme" (monokai-theme :type git :flavor melpa :host github :repo "oneKelvinSmith/monokai-emacs") "tramp" nil "helm-tramp" (helm-tramp :type git :flavor melpa :host github :repo "masasam/emacs-helm-tramp") "helm" (helm :type git :flavor melpa :files ("*.el" "emacs-helm.sh" (:exclude "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") "helm-pkg.el") :host github :repo "emacs-helm/helm") "async" (async :type git :flavor melpa :host github :repo "jwiegley/emacs-async") "popup" (popup :type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el") "helm-core" (helm-core :type git :flavor melpa :files ("helm-core-pkg.el" "helm.el" "helm-lib.el" "helm-source.el" "helm-multi-match.el" "helm-core-pkg.el") :host github :repo "emacs-helm/helm") "exec-path-from-shell" (exec-path-from-shell :type git :flavor melpa :host github :repo "purcell/exec-path-from-shell") "helm-projectile" (helm-projectile :type git :flavor melpa :host github :repo "bbatsov/helm-projectile") "projectile" (projectile :type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile") "pkg-info" (pkg-info :type git :flavor melpa :host github :repo "emacsorphanage/pkg-info") "epl" (epl :type git :flavor melpa :host github :repo "cask/epl") "helm-descbinds" (helm-descbinds :type git :flavor melpa :host github :repo "emacs-helm/helm-descbinds") "helm-bibtex" (helm-bibtex :type git :flavor melpa :files ("helm-bibtex.el" "helm-bibtex-pkg.el") :host github :repo "tmalsburg/helm-bibtex") "bibtex-completion" (bibtex-completion :type git :flavor melpa :files ("bibtex-completion.el" "bibtex-completion-pkg.el") :host github :repo "tmalsburg/helm-bibtex") "parsebib" (parsebib :type git :flavor melpa :host github :repo "joostkremers/parsebib") "dash" (dash :type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el") "f" (f :type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el") "biblio" (biblio :type git :flavor melpa :files (:defaults (:exclude "biblio-core.el") "biblio-pkg.el") :host github :repo "cpitclaudel/biblio.el") "biblio-core" (biblio-core :type git :flavor melpa :files ("biblio-core.el" "biblio-core-pkg.el") :host github :repo "cpitclaudel/biblio.el") "let-alist" nil "seq" nil "hydra" (hydra :type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra") "lv" (lv :type git :flavor melpa :files ("lv.el" "lv-pkg.el") :host github :repo "abo-abo/hydra") "helpful" (helpful :type git :flavor melpa :host github :repo "Wilfred/helpful") "dash-functional" (dash-functional :type git :flavor melpa :files ("dash-functional.el" "dash-functional-pkg.el") :host github :repo "magnars/dash.el") "elisp-refs" (elisp-refs :type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs") "info+" nil "counsel-projectile" (counsel-projectile :type git :flavor melpa :host github :repo "ericdanan/counsel-projectile") "counsel" (counsel :type git :flavor melpa :files ("counsel.el" "counsel-pkg.el") :host github :repo "abo-abo/swiper") "swiper" (swiper :type git :flavor melpa :files ("swiper.el" "swiper-pkg.el") :host github :repo "abo-abo/swiper") "ivy" (ivy :type git :flavor melpa :files (:defaults (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "doc/ivy-help.org" "ivy-pkg.el") :host github :repo "abo-abo/swiper") "perspective" (perspective :type git :flavor melpa :host github :repo "nex3/perspective-el") "all-the-icons" (all-the-icons :type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el") "memoize" (memoize :type git :flavor melpa :host github :repo "skeeto/emacs-memoize") "all-the-icons-dired" (all-the-icons-dired :type git :flavor melpa :host github :repo "jtbm37/all-the-icons-dired") "pdf-tools" (pdf-tools :type git :flavor melpa :files ("lisp/*.el" "README" ("build" "Makefile") ("build" "server") (:exclude "lisp/tablist.el" "lisp/tablist-filter.el") "pdf-tools-pkg.el") :host github :repo "politza/pdf-tools") "tablist" (tablist :type git :flavor melpa :host github :repo "politza/tablist") "dired-hacks-utils" (dired-hacks-utils :type git :flavor melpa :files ("dired-hacks-utils.el" "dired-hacks-utils-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-filter" (dired-filter :type git :flavor melpa :files ("dired-filter.el" "dired-filter-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-rainbow" (dired-rainbow :type git :flavor melpa :files ("dired-rainbow.el" "dired-rainbow-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-narrow" (dired-narrow :type git :flavor melpa :files ("dired-narrow.el" "dired-narrow-pkg.el") :host github :repo "Fuco1/dired-hacks") "dired-collapse" (dired-collapse :type git :flavor melpa :files ("dired-collapse.el" "dired-collapse-pkg.el") :host github :repo "Fuco1/dired-hacks") "nov" (nov :type git :flavor melpa :repo "https://depp.brause.cc/nov.el.git") "esxml" (esxml :type git :flavor melpa :files ("esxml.el" "esxml-query.el" "esxml-pkg.el") :host github :repo "tali713/esxml") "elfeed" (elfeed :type git :flavor melpa :host github :repo "skeeto/elfeed") "elfeed-org" (elfeed-org :type git :flavor melpa :host github :repo "remyhonig/elfeed-org") "emms" (emms :type git :flavor melpa :files ("*.el" "lisp/*.el" "doc/emms.texinfo" "emms-pkg.el") :repo "https://git.savannah.gnu.org/git/emms.git") "mu4e" nil "dashboard" (dashboard :type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard") "page-break-lines" (page-break-lines :type git :flavor melpa :host github :repo "purcell/page-break-lines") "which-key" (which-key :type git :flavor melpa :host github :repo "justbur/emacs-which-key") "magit" (magit :type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit") "git-commit" (git-commit :type git :flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :host github :repo "magit/magit") "transient" (transient :type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient") "with-editor" (with-editor :type git :flavor melpa :host github :repo "magit/with-editor") "magit-todos" (magit-todos :type git :flavor melpa :host github :repo "alphapapa/magit-todos") "hl-todo" (hl-todo :type git :flavor melpa :host github :repo "tarsius/hl-todo") "pcre2el" (pcre2el :type git :flavor melpa :files ("pcre2el.el" "pcre2el-pkg.el") :host github :repo "joddie/pcre2el") "engine-mode" (engine-mode :type git :flavor melpa :host github :repo "hrs/engine-mode") "yasnippet-snippets" (yasnippet-snippets :type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets") "helm-c-yasnippet" (helm-c-yasnippet :type git :flavor melpa :host github :repo "emacs-jp/helm-c-yasnippet") "org-super-agenda" (org-super-agenda :type git :flavor melpa :host github :repo "alphapapa/org-super-agenda") "ht" (ht :type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el") "ts" (ts :type git :flavor melpa :host github :repo "alphapapa/ts.el") "deft" (deft :type git :flavor melpa :host github :repo "jrblevin/deft") "org-roam" (org-roam :type git :flavor melpa :host github :repo "org-roam/org-roam") "emacsql" (emacsql :type git :flavor melpa :files ("emacsql.el" "emacsql-compiler.el" "emacsql-system.el" "README.md" "emacsql-pkg.el") :host github :repo "skeeto/emacsql") "emacsql-sqlite3" (emacsql-sqlite3 :type git :flavor melpa :host github :repo "cireu/emacsql-sqlite3") "org-roam-bibtex" (org-roam-bibtex :type git :flavor melpa :host github :repo "org-roam/org-roam-bibtex") "org-ref" (org-ref :type git :flavor melpa :files (:defaults "org-ref.org" "org-ref.bib" "citeproc" "org-ref-pkg.el") :host github :repo "jkitchin/org-ref") "htmlize" (htmlize :type git :flavor melpa :host github :repo "hniksic/emacs-htmlize") "key-chord" (key-chord :type git :flavor melpa :host github :repo "emacsorphanage/key-chord") "org-noter" (org-noter :type git :flavor melpa :host github :repo "weirdNox/org-noter") "org-journal" (org-journal :type git :flavor melpa :host github :repo "bastibe/org-journal") "ring" nil "org-cliplink" (org-cliplink :type git :flavor melpa :host github :repo "rexim/org-cliplink") "dired-sidebar" (dired-sidebar :type git :flavor melpa :host github :repo "jojojames/dired-sidebar") "dired-subtree" (dired-subtree :type git :flavor melpa :files ("dired-subtree.el" "dired-subtree-pkg.el") :host github :repo "Fuco1/dired-hacks") "treemacs" (treemacs :type git :flavor melpa :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el") :host github :repo "Alexander-Miller/treemacs") "ace-window" (ace-window :type git :flavor melpa :host github :repo "abo-abo/ace-window") "avy" (avy :type git :flavor melpa :host github :repo "abo-abo/avy") "pfuture" (pfuture :type git :flavor melpa :host github :repo "Alexander-Miller/pfuture") "cfrs" (cfrs :type git :flavor melpa :host github :repo "Alexander-Miller/cfrs") "posframe" (posframe :type git :flavor melpa :host github :repo "tumashu/posframe") "treemacs-evil" (treemacs-evil :type git :flavor melpa :files ("src/extra/treemacs-evil.el" "treemacs-evil-pkg.el") :host github :repo "Alexander-Miller/treemacs") "evil" (evil :type git :flavor melpa :files (:defaults "doc/build/texinfo/evil.texi" (:exclude "evil-test-helpers.el") "evil-pkg.el") :host github :repo "emacs-evil/evil") "goto-chg" (goto-chg :type git :flavor melpa :host github :repo "emacs-evil/goto-chg") "treemacs-projectile" (treemacs-projectile :type git :flavor melpa :files ("src/extra/treemacs-projectile.el" "treemacs-projectile-pkg.el") :host github :repo "Alexander-Miller/treemacs") "treemacs-icons-dired" (treemacs-icons-dired :type git :flavor melpa :files ("src/extra/treemacs-icons-dired.el" "treemacs-icons-dired-pkg.el") :host github :repo "Alexander-Miller/treemacs") "treemacs-magit" (treemacs-magit :type git :flavor melpa :files ("src/extra/treemacs-magit.el" "treemacs-magit-pkg.el") :host github :repo "Alexander-Miller/treemacs") "treemacs-persp" (treemacs-persp :type git :flavor melpa :files ("src/extra/treemacs-persp.el" "treemacs-persp-pkg.el") :host github :repo "Alexander-Miller/treemacs") "persp-mode" (persp-mode :type git :flavor melpa :host github :repo "Bad-ptr/persp-mode.el"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil "tramp" (tramp :type git :host github :repo "emacs-straight/tramp" :files ("*" (:exclude ".git"))) "let-alist" (let-alist :type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git"))) "seq" nil "info+" nil "mu4e" nil "ring" nil)) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "cl-lib" nil "seq" nil "info+" (info+ :type git :host github :repo "emacsmirror/info-plus") "mu4e" (mu4e :type git :host github :repo "emacsmirror/mu4e") "ring" nil))))
+
+("org-elpa" "melpa" "gnu-elpa-mirror" "emacsmirror-mirror" "straight" "use-package" "ring" "monokai-theme" "tramp" "helm-tramp" "exec-path-from-shell" "helm" "helm-projectile" "helm-descbinds" "helm-bibtex" "hydra" "helpful" "info+" "projectile" "counsel-projectile" "perspective" "all-the-icons" "all-the-icons-dired" "company" "pdf-tools" "dired-hacks-utils" "dired-filter" "dired-rainbow" "dired-narrow" "dired-collapse" "nov" "elfeed" "elfeed-org" "emms" "mu4e" "dashboard" "which-key" "magit" "magit-todos" "engine-mode" "yasnippet" "yasnippet-snippets" "helm-c-yasnippet" "treemacs" "treemacs-evil" "treemacs-projectile" "treemacs-icons-dired" "treemacs-magit" "treemacs-persp" "org" "org-super-agenda" "deft" "org-roam" "org-roam-bibtex" "org-ref" "org-noter" "org-journal" "org-cliplink" "editorconfig" "elpy")
 
 t
