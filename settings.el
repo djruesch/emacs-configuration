@@ -303,8 +303,8 @@
 
 ;(setq sql-postgres-options "optional command line options")
 
-(global-unset-key (kbd "C-x C-c")) ;;killing Emacs 
-(global-set-key (kbd "C-x C-c") 'delete-frame) ;;kill Frame 
+;(global-unset-key (kbd "C-x C-c")) ;;killing Emacs
+;(global-set-key (kbd "C-x C-c") 'delete-frame) ;;kill Frame 
 (global-unset-key (kbd "C-x C-z")) ;;Minimizing a Window
 
 (setq package-enable-at-startup nil)
@@ -444,9 +444,9 @@
 
      ;; Windows location
      (when (window-system)
-     (set-frame-height (selected-frame) 91)
-     (set-frame-width (selected-frame) 151)
-     (set-frame-position (selected-frame) 1921 0))
+     (set-frame-height (selected-frame) 89)
+     (set-frame-width (selected-frame) 150)
+     (set-frame-position (selected-frame) 1985 -800))
 
      (my-startup-layout )
  )
@@ -579,6 +579,23 @@ orig-fg))))
 
 ;; large file warning
 (setq large-file-warning-threshold (* 15 1024 1024))
+
+(server-start)
+;(require 'server)
+
+;(setq server-port    52698)
+;(setq server-use-tcp t)
+
+(defun server-start-and-copy ()
+  (server-start)
+  (copy-file "~/.emacs.d/server/server" "/Volumes/DJRuesch/.emacs.d/server/server" t))
+
+;(add-hook 'emacs-startup-hook 'server-start-and-copy)
+
+; (when (and (or (eq system-type 'windows-nt) (eq system-type 'darwin))
+ ;	    (not (and (boundp 'server-clients) server-clients))
+ ;	    (not (daemonp)))
+  ; (server-start))
 
 (use-package monokai-theme 
   :ensure t
@@ -1525,6 +1542,15 @@ org-priority-lowest "C")
 (setq org-use-fast-todo-selection t)
 
 ;(setq current-journal-filename (concat "~/org/journals/" %(format-time-string org-journal-year-format) "/" %(format-time-string org-journal-file-format))
+(defun org-journal-find-location ()
+  ;; Open today's journal, but specify a non-nil prefix argument in order to
+  ;; inhibit inserting the heading; org-capture will insert the heading.
+  (org-journal-new-entry t)
+  (unless (eq org-journal-file-type 'daily)
+    (org-narrow-to-subtree))
+  (goto-char (point-max)))
+
+(setq org-capture-templates '())
 
  (setq org-capture-templates
 	'( ("P" "Planning")
@@ -1532,42 +1558,51 @@ org-priority-lowest "C")
 	   ("P
 w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (file "~/org/templates/weekly_review.org"))
 	   ("Pm" "Monthly Report" plain (file+datetree+prompt "~/org/journals/djruesch.org")(file "~/org/templates/monthly_report.org"))
+	   
+	   ("k" "Bookmarks")
+	   ("kd" "DJRuesch" entry (file+headline (lambda () (personal-note 'djruesch)) "Bookmarks")"** %(org-cliplink-capture)%?\n" :unnarrowed t)
+	   ("kc" "CodigoPD" entry (file+headline (lambda () (personal-notedit ../e 'codigopd)) "Bookmarks")"** %(org-cliplink-capture)%?\n" :unnarrowed t)
 	   	  	   
-	   ("e" "Events"  entry (file "~/org/inbox.org") 
+	   ("m" "Meeting"  entry (file "~/org/organizer.org" "Inbox") 
 	   "* %^{Name}\t\t\t%^G\n:PROPERTIES:\n:TYPE: Event\n:CATEGORY: %^{Client|DJRuesch|CodigoPD}\n :CREATED: %U\n:END:\n\nLocation: %?\n\nSCHEDULED: %^{Scheduled}t")
 	   
 	   ;("g" "Goal"  entry (file+headline "~/org/organizer.org" "Inbox")
 	   ;"* %^{Name}\t\t\t:Goal:%^G\n:PROPERTIES:\n:TYPE: Goal\n:CATEGORY: %^{Client|DJRuesch|CodigoPD}\n:TERM:%^{Term|Long|Medium|Short}\n:CREATED: %U\n:END:\n\n%?\n\nDEADLINE: %^{Deadline}t")
 	   
 
-	   ;("p" "Project"  entry (file+headline "~/org/inbox.org")
+	   ;("p" "Project"  entry (file+headline "~/org/organizer.org" "Inbox")
    	   ;"* PROJECT - %^{Name}\t\t\t:Project:%^G\n:PROPERTIES:\n:Type: Project\n:Created: %U\n:END:\n%?" :prepend t)
 
-	   ;("f" "Feature" entry (file+headline "~/org/inbox.org")
+	   ;("f" "Feature" entry (file+headline "~/org/organizer.org" "Inbox")
 	   ;"* FEATURE - %?\t\t\t:Feature:%^G\n:PROPERTIES:\n:Type: Feature\nCREATED: %U\n:END:\n  %a" :clock-in t :clock-resume t)
 
-	    ("i" "Idea" entry (file "~/org/inbox.org")
+	    ("i" "Idea" entry (file "~/org/organizer.org" "Inbox")
 	   "*** IDEA %^{Name}\t\t\t:Idea:%^G\n:PROPERTIES:\n:Type: Idea\n:CATEGORY: %^{Client|DJRuesch|CodigoPD}\nCREATED: %U\n:END:\n%?" :clock-in t :clock-resume t)
 
-	   ("t" "Todo" entry (file "~/org/inbox.org")
+	    ("j" "Jouranl")
+	    ("jt" "Today's Entry" plain (function org-journal-today)
+                               "** %(format-time-string org-journal-time-format)%^{Title}\n%i%?"
+                               :jump-to-captured t :immediate-finish t)
+	    ("jp" "Past Entry" plain (function org-journal-past)
+                               "** %(format-time-string org-journal-time-format)%^{Title}\n%i%?"
+                               :jump-to-captured t :immediate-finish t)
+	    ("js" "Scheduled Entry" plain (function org-journal-scheduled)
+                               "** TODO %?\n <%(princ org-journal--date-location-scheduled-time)>\n"
+                               :jump-to-captured t)
+
+	   ("t" "Todo" entry (file "~/org/organizer.org" "Inbox")
 	   "* TODO %^{Name}\t\t\t:Todo:\n:PROPERTIES:\n:Type: Todo\n:CATEGORY: %^{Client|DJRuesch|CodigoPD}\n:CREATED: %U\n:END:\n%?\n" :clock-in t :clock-resume t)
 
-	   ("n" "Next" entry (file "~/org/inbox.org")
+	   ("n" "Next" entry (file "~/org/organizer.org" "Inbox")
 	   "* NEXT %^{Name}\t\t\t:Todo:%^G\n:PROPERTIES:\n:Type: Next\n:CATEGORY: %^{Client|DJRuesch|CodigoPD}\nCREATED: %U\n:END:\n%?" :clock-in t :clock-resume t)
 
-	   ("h" "Habit" entry (file "~/org/inbox.org") 
+	   ("h" "Habit" entry (file "~/org/organizer.org" "Inbox") 
 	   "* NEXT %^{Name}\t\t\t:Habit:\n:PROPERTIES:\n:CREATED: %U\n:CATEGORY: %^{Client|DJRuesch|CodigoPD}\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:LOGGING: DONE(!)\n:ARCHIVE: %%s_archive::* Habits\n:END:\n\nSCHEDULED: <%<%Y-%m-%d %a .+1d>>\n%U\n%?")
 	   
-	   ;("n" "Notes" plain (function org-roam-capture) (file "~/org/templates/notes.org"))
-	   ;"%?" :file-name "${slug}" :head "#+TITLE: ${title}\n #+ROAM_KEY: ${ref}\n #+ROAM_ALIAS:\n #+ROAM_TAGS:\n#+CREATED: %u\n #+LAST_MODIFIED: %U\n source :: ${ref}\n\n":unnarrowed t :immediate-finish t)
-	  
-	   ("b" "Bookmark" entry (file+headline "~/org/bookmarks.org" "Bookmarks")
-	   "* %^{Name}\t\t\t%^G\n:PROPERTIES:\n:TYPE: Bookmark\n:CATEGORY: %^{Client|DJRuesch|CodigoPD\n:Created: %U\n:END:\n\n%?" :empty-lines 1)
-	  
-	   ("j" "Journals")
-	   ("jd" "DJRuesch" plain (file+datetree+prompt "~/org/journals/djruesch.org")
+	   ("n" "Notes")
+	   ("nd" "DJRuesch" plain (file+datetree+prompt "~/org/DJRuesch/notes.org")
            "**** %^{Name}\n:PROPERTIES:\n:TYPE: Journal\n:CATEGORY: DJRuesch\n:CREATED: %U\n:END:\n\n%?")
-	   ("jc" "CodigoPD" plain (file+datetree+prompt "~/org/journals/codigopd.org")
+	   ("nc" "CodigoPD" plain (file+datetree+prompt "~/org/CodigoPD/notes.org")
            "%K - %a\n%i\n\n%?")
 	   
 	   ("f" "Finance")
@@ -1578,12 +1613,12 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
 	   ("fe" "Expense")
 	   ("feg" "Expense:Gifts" plain (file ledger-journal-file) "%(org-read-date) * send %^{Send to} %^{For why}\nExpense:Gifts  %^{Amount} %^{Currency|CLP|USD}\nAssets:%^{Account|Personal|CodigoPD}\n")
 
-	   ("c" "Contacts" entry (file "~/org/contacts.org") "* %(org-contacts-template-name)\n:PROPERTIES:\n:EMAIL: %(org-contacts-template-email)\n:PHONE: %^{Phone| }\n:CELL: %^{Cell| }\n:ADDRESS: %^{Address| }\n:ADDRESS1: %^{Address 1| }\n:CITY: %^{City| }\n:STATE: %^{State| |Utah|O'Higgins}\n:ZIP: %^{Zip Code| }\n:COUNTRY: %^{Country|USA|Chile}\n:GROUPS: %^g\n:BIRTHDAY: %^{Birthday}t\n:END:\n\nNOTES:\n%?")
+	   ("c" "Contacts")
+	   ("cd" "DJRuesch" entry (file "~/org/DJRuesch/contacts.org") "* %(org-contacts-template-name)\n:PROPERTIES:\n:EMAIL: %(org-contacts-template-email)\n:PHONE: %^{Phone| }\n:CELL: %^{Cell| }\n:ADDRESS: %^{Address| }\n:ADDRESS1: %^{Address 1| }\n:CITY: %^{City| }\n:STATE: %^{State| |Utah|O'Higgins}\n:ZIP: %^{Zip Code| }\n:COUNTRY: %^{Country|USA|Chile}\n:GROUPS: %^g\n:BIRTHDAY: %^{Birthday}t\n:END:\n\nNOTES:\n%?")
+	   ("cc" "CodigoPD" entry (file "~/org/CodigoPD/contacts.org") "* %(org-contacts-template-name)\n:PROPERTIES:\n:EMAIL: %(org-contacts-template-email)\n:PHONE: %^{Phone| }\n:CELL: %^{Cell| }\n:ADDRESS: %^{Address| }\n:ADDRESS1: %^{Address 1| }\n:CITY: %^{City| }\n:STATE: %^{State| |Utah|O'Higgins}\n:ZIP: %^{Zip Code| }\n:COUNTRY: %^{Country|USA|Chile}\n:GROUPS: %^g\n:BIRTHDAY: %^{Birthday}t\n:END:\n\nNOTES:\n%?")
 	   
-	   ;("j" "Journal" entry (file+olp+datetree current-journal-filename)
-	   ;"* Journal - %U\t\t\t:Journal:\n:PROPERTIES:\n:Type: entry\n:Journal: %^{Journal|DJRuesch|CodigoPD|}\n:Author: djruesch\n:Created: %U\n:END:%\n\n^{Title:}/n\n%?")
 	   ("B" "Blogs")
-	   ("Bc" "CodigoPD - (Idea)" entry (file+olp+datetree "~/org/blogs/codigopd.org")
+	   ("Bc" "CodigoPD" entry (file+olp+datetree "~/org/CodigoPD/blog.org")
 	   "* %^{Title: }\t\t\t:CodigoPD:\n:PROPERTIES:\n:Type: Blog\n:Status: %^{Staus|Idea|Draft|Published}\n:Author: Del Ruesch\n:Created: %U\n:END:\n\n%?")
 	   
 	   
@@ -1782,13 +1817,40 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
   (save-buffer)
   (kill-buffer-and-window))
 
-(defun org-journal-find-location ()
+(defvar org-journal--date-location-scheduled-time nil)
+
+(defun org-journal-today (&optional scheduled-time)
+  (let ((scheduled-time (or scheduled-time (org-read-date nil nil nil "Date:"))))
+    (setq org-journal--date-location-scheduled-time scheduled-time)
+    (org-journal-new-entry t (org-time-string-to-time scheduled-time))
+    (unless (eq org-journal-file-type 'daily)
+      (org-narrow-to-subtree))
+    (goto-char (point-max))))
+
+
+(defun org-journal-past (&optional scheduled-time)
+  (let ((scheduled-time (or scheduled-time (org-read-date nil nil nil "Date:"))))
+    (setq org-journal--date-location-scheduled-time scheduled-time)
+    (org-journal-new-date-entry t (org-time-string-to-time scheduled-time))
+    (unless (eq org-journal-file-type 'daily)
+      (org-narrow-to-subtree))
+    (goto-char (point-max))))
+
+(defun org-journal-scheduled ()
   ;; Open today's journal, but specify a non-nil prefix argument in order to
   ;; inhibit inserting the heading; org-capture will insert the heading.
   (org-journal-new-scheduled-entry t)
   ;; Position point on the journal's top-level heading so that org-capture
   ;; will add the new entry as a child entry.
   (goto-char (point-min)))
+
+;(defun org-journal-past ()
+  ;; Open today's journal, but specify a non-nil prefix argument in order to
+  ;; inhibit inserting the heading; org-capture will insert the heading.
+ ; (org-journal-new-date-entry t)
+  ;; Position point on the journal's top-level heading so that org-capture
+  ;; will add the new entry as a child entry.
+ ; (goto-char (point-min)))
 
 (defun org-journal-file-header-func (time)
   "Custom function to create journal header."
@@ -1805,9 +1867,15 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
 (use-package org-journal
 :ensure t
 :requires (org-journal)
+
 :config
+(define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)
+
+)
+
+
 (customize-set-variable 'org-journal-file-type 'daily)
-(customize-set-variable 'org-journal-dir "~/org/journals/")
+(customize-set-variable 'org-journal-dir "~/org/journal/")
 (customize-set-variable 'org-journal-file-format "%Y-%m-%d.org")
 (customize-set-variable 'org-journal-date-format "%e %b %Y - (%A)")
 (customize-set-variable 'org-journal-time-format "%H:%M")
@@ -1815,12 +1883,7 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
 (customize-set-variable 'org-journal-date-prefix "* ")
 (customize-set-variable 'org-journal-time-prefix "** ")
 (customize-set-variable 'org-journal-enable-agenda-integration t)
-
-
-
-(define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)
-
-)
+(setq org-journal-enable-cache t)
 
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
     (org-agenda-files :maxlevel . 9))))
@@ -1849,6 +1912,17 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
 (require 'org-bullets)
 (setq org-bullets-bullet-list '("☯" "○" "✸" "✿" "~"))
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(use-package org-cliplink
+:ensure t
+:requires (org-cliplink)
+)
+
+(defun personal-note (ntype)
+  (cond
+    ((string= 'djruesch ntype) (concat org-directory (format-time-string "/DJRuesch/bookmarks.org")))
+    ((string= 'codigopd ntype) (concat org-directory (format-time-string "/CodigoPD/bookmarks.org")))
+    (t (error "Invalid personal note type: " ntype))))
 
 (use-package editorconfig
   :ensure t

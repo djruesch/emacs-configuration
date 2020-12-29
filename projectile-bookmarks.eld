@@ -1,1 +1,1 @@
-("~/Proyectos/system/emacs.d/" "~/org/" "/Volumes/DJRuesch/Proyectos/system/")
+("~/org/" "~/Proyectos/system/emacs.d/" "~/Proyectos/codigopd/pd_website/" "~/Proyectos/codigopd/portal/" "~/Proyectos/codigopd/pd_converse/" "/Volumes/DJRuesch/Proyectos/system/")

@@ -1,0 +1,14 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("127.0.0.1"
+  [url-cookie "pga4_session" "dd5caac9-b163-4100-ba51-c4ca9bb1a74f!UKgW/bwOX7lSnSaZJ27og83mh04=" "Wed, 30-Dec-2020 01:07:30 GMT" "/" "127.0.0.1" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:
