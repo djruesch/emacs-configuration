@@ -53,13 +53,13 @@
     (goto-char (point-max))
     (goto-char pos)))
 
- (defun dj/kill-this-buffer ()
-   "Kill the current buffer"
-   (interactive)
-   (kill-buffer (current-buffer)))
+(defun dj/kill-this-buffer ()
+  "Kill the current buffer"
+  (interactive)
+  (kill-buffer (current-buffer)))
 
- (bind-keys
-  ("C-x C-k" . dj/kill-this-buffer))
+(bind-keys
+ ("C-x C-k" . dj/kill-this-buffer))
 
 (defun dj/change-frame-font-size (fn)
   "Change the frame font size according to function FN."
@@ -86,57 +86,57 @@
  ("s-+" . dj/frame-text-scale-increase)
  ("s-=" . dj/frame-text-scale-increase))
 
- (use-package ring
-   :commands (dj/transparency-apply dj/transparency-next dj/transparency-previous
-		     dj/transparency-cycle dj/transparency-add)
-   :config
-   (setq dj/transparency-ring
-     (ring-convert-sequence-to-ring (list '(100 100) '(100 50) '(100 10) '(95 50) '(90 50) '(85 50)))
-     dj/transparency
-     (ring-ref dj/transparency-ring 0))
+(use-package ring
+  :commands (dj/transparency-apply dj/transparency-next dj/transparency-previous
+		    dj/transparency-cycle dj/transparency-add)
+  :config
+  (setq dj/transparency-ring
+    (ring-convert-sequence-to-ring (list '(100 100) '(100 50) '(100 10) '(95 50) '(90 50) '(85 50)))
+    dj/transparency
+    (ring-ref dj/transparency-ring 0))
 
-   (defun dj/transparency-apply (trans)
-     "Apply the TRANS alpha value to the frame."
-     (set-frame-parameter (selected-frame) 'alpha (setq dj/transparency trans)))
+  (defun dj/transparency-apply (trans)
+    "Apply the TRANS alpha value to the frame."
+    (set-frame-parameter (selected-frame) 'alpha (setq dj/transparency trans)))
 
-   (defun dj/transparency-next ()
-     "Apply the next transparency value in the ring `dj/transparency-ring`."
-     (interactive)
-     (dj/transparency-apply (ring-next dj/transparency-ring dj/transparency)))
+  (defun dj/transparency-next ()
+    "Apply the next transparency value in the ring `dj/transparency-ring`."
+    (interactive)
+    (dj/transparency-apply (ring-next dj/transparency-ring dj/transparency)))
 
-   (defun dj/transparency-previous ()
-     "Apply the previous transparency value in the ring `dj/transparency-ring`."
-     (interactive)
-     (dj/transparency-apply (ring-previous dj/transparency-ring dj/transparency)))
+  (defun dj/transparency-previous ()
+    "Apply the previous transparency value in the ring `dj/transparency-ring`."
+    (interactive)
+    (dj/transparency-apply (ring-previous dj/transparency-ring dj/transparency)))
 
-   (defun dj/transparency-cycle ()
-     "Cycle to the next transparency setting."
-     (interactive)
-     (dj/transparency-next))
+  (defun dj/transparency-cycle ()
+    "Cycle to the next transparency setting."
+    (interactive)
+    (dj/transparency-next))
 
-   (defun dj/transparency-add (active inactive)
-     "Add ACTIVE and INACTIVE transparency values to the ring."
-     (interactive "nActive Transparency:\nnInactive Transparency:")
-     (ring-insert+extend dj/transparency-ring (list active inactive) t)
-     (dj/transparency-apply (list active inactive))))
+  (defun dj/transparency-add (active inactive)
+    "Add ACTIVE and INACTIVE transparency values to the ring."
+    (interactive "nActive Transparency:\nnInactive Transparency:")
+    (ring-insert+extend dj/transparency-ring (list active inactive) t)
+    (dj/transparency-apply (list active inactive))))
 
 (global-set-key (kbd "C-d") 'dj/duplicate-line)      ;; Duplicate Line
 
-   (defun dj/duplicate-line()
-     (interactive)
-     (move-beginning-of-line 1)
-     (kill-line)
-     (yank)
-     (open-line 1)
-     (next-line 1)
-     (yank)
-   )
+(defun dj/duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+)
 
 (global-set-key (kbd "C-c r") 'dj/reload-init-file)
 
- (defun dj/reload-init-file ()
-   (interactive)
-   (load-file "~/.emacs.d/init.el"))
+(defun dj/reload-init-file ()
+  (interactive)
+  (load-file "~/.emacs.d/init.el"))
 
 (defun move-line-up ()
   "Move up the current line."
@@ -224,60 +224,60 @@
     (setq auth-sources '((:source "~/.authinfo.gpg" :host t :protocol t)))
     (setq auth-sources '((:source "~/.authinfo" :host t :protocol t))))
 
-   (setq custom-file "~/.emacs.d/custom-file.el")
-   (if (file-exists-p custom-file)
-   (load-file custom-file))
+(setq custom-file "~/.emacs.d/custom-file.el")
+(if (file-exists-p custom-file)
+(load-file custom-file))
 
-   (with-eval-after-load "bind-key"
-   (bind-key "<f7>"
-	 (lambda ()
-	 (interactive
-	 (find-file custom-file)))))
+(with-eval-after-load "bind-key"
+(bind-key "<f7>"
+      (lambda ()
+      (interactive
+      (find-file custom-file)))))
 
-   (let* ((variable-tuple
-    (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
-	  ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
-	  ((x-list-fonts "Verdana")         '(:font "Verdana"))
-	  ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
-	  (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
-       (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+(let* ((variable-tuple
+ (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+       ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+       ((x-list-fonts "Verdana")         '(:font "Verdana"))
+       ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+       (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+    (base-font-color     (face-foreground 'default nil 'default))
+    (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
 
-   (custom-theme-set-faces
-   'user
-   `(org-level-8 ((t (,@headline ,@variable-tuple))))
-   `(org-level-7 ((t (,@headline ,@variable-tuple))))
-   `(org-level-6 ((t (,@headline ,@variable-tuple))))
-   `(org-level-5 ((t (,@headline ,@variable-tuple))))
-   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
-   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
-   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
-   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
-   `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
+(custom-theme-set-faces
+'user
+`(org-level-8 ((t (,@headline ,@variable-tuple))))
+`(org-level-7 ((t (,@headline ,@variable-tuple))))
+`(org-level-6 ((t (,@headline ,@variable-tuple))))
+`(org-level-5 ((t (,@headline ,@variable-tuple))))
+`(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+`(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+`(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+`(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+`(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
 
-   ;; Face pitch
-   (custom-theme-set-faces
-   'user
-   '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight light))))
-   '(fixed-pitch ((t ( :family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal)))))
+;; Face pitch
+(custom-theme-set-faces
+'user
+'(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight light))))
+'(fixed-pitch ((t ( :family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal)))))
 
-   (add-hook 'org-mode-hook 'variable-pitch-mode)
+(add-hook 'org-mode-hook 'variable-pitch-mode)
 
-   ;; Faces for elements
-   (custom-theme-set-faces
-   'user
-   '(org-block ((t (:inherit fixed-pitch))))
-   '(org-code ((t (:inherit (shadow fixed-pitch)))))
-   '(org-document-info ((t (:foreground "dark orange"))))
-   '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
-   '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
-   '(org-link ((t (:foreground "royal blue" :underline t))))
-   '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
-   '(org-property-value ((t (:inherit fixed-pitch))) t)
-   '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
-   '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
-   '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
-   '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
+;; Faces for elements
+(custom-theme-set-faces
+'user
+'(org-block ((t (:inherit fixed-pitch))))
+'(org-code ((t (:inherit (shadow fixed-pitch)))))
+'(org-document-info ((t (:foreground "dark orange"))))
+'(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+'(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+'(org-link ((t (:foreground "royal blue" :underline t))))
+'(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+'(org-property-value ((t (:inherit fixed-pitch))) t)
+'(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+'(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+'(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+'(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
 
 (add-to-list 'exec-path "/usr/local/opt/mysql-client/bin/mysql")
 
@@ -307,7 +307,7 @@
 ;(global-set-key (kbd "C-x C-c") 'delete-frame) ;;kill Frame 
 (global-unset-key (kbd "C-x C-z")) ;;Minimizing a Window
 
- (setq package-enable-at-startup nil)
+(setq package-enable-at-startup nil)
 
 (setq gc-cons-threshold 100000000)
 
@@ -363,60 +363,60 @@
   (executable-find "pdflatex")
   "Do we have pdflatex?")
 
-   (setq custom-file "~/.emacs.d/custom-file.el")
-   (if (file-exists-p custom-file)
-   (load-file custom-file))
+(setq custom-file "~/.emacs.d/custom-file.el")
+(if (file-exists-p custom-file)
+(load-file custom-file))
 
-   (with-eval-after-load "bind-key"
-   (bind-key "<f7>"
-	 (lambda ()
-	 (interactive
-	 (find-file custom-file)))))
+(with-eval-after-load "bind-key"
+(bind-key "<f7>"
+      (lambda ()
+      (interactive
+      (find-file custom-file)))))
 
-   (let* ((variable-tuple
-    (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
-	  ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
-	  ((x-list-fonts "Verdana")         '(:font "Verdana"))
-	  ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
-	  (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
-       (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+(let* ((variable-tuple
+ (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+       ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+       ((x-list-fonts "Verdana")         '(:font "Verdana"))
+       ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+       (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+    (base-font-color     (face-foreground 'default nil 'default))
+    (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
 
-   (custom-theme-set-faces
-   'user
-   `(org-level-8 ((t (,@headline ,@variable-tuple))))
-   `(org-level-7 ((t (,@headline ,@variable-tuple))))
-   `(org-level-6 ((t (,@headline ,@variable-tuple))))
-   `(org-level-5 ((t (,@headline ,@variable-tuple))))
-   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
-   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
-   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
-   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
-   `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
+(custom-theme-set-faces
+'user
+`(org-level-8 ((t (,@headline ,@variable-tuple))))
+`(org-level-7 ((t (,@headline ,@variable-tuple))))
+`(org-level-6 ((t (,@headline ,@variable-tuple))))
+`(org-level-5 ((t (,@headline ,@variable-tuple))))
+`(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+`(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+`(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+`(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+`(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
 
-   ;; Face pitch
-   (custom-theme-set-faces
-   'user
-   '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight light))))
-   '(fixed-pitch ((t ( :family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal)))))
+;; Face pitch
+(custom-theme-set-faces
+'user
+'(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight light))))
+'(fixed-pitch ((t ( :family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal)))))
 
-   (add-hook 'org-mode-hook 'variable-pitch-mode)
+(add-hook 'org-mode-hook 'variable-pitch-mode)
 
-   ;; Faces for elements
-   (custom-theme-set-faces
-   'user
-   '(org-block ((t (:inherit fixed-pitch))))
-   '(org-code ((t (:inherit (shadow fixed-pitch)))))
-   '(org-document-info ((t (:foreground "dark orange"))))
-   '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
-   '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
-   '(org-link ((t (:foreground "royal blue" :underline t))))
-   '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
-   '(org-property-value ((t (:inherit fixed-pitch))) t)
-   '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
-   '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
-   '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
-   '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
+;; Faces for elements
+(custom-theme-set-faces
+'user
+'(org-block ((t (:inherit fixed-pitch))))
+'(org-code ((t (:inherit (shadow fixed-pitch)))))
+'(org-document-info ((t (:foreground "dark orange"))))
+'(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+'(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+'(org-link ((t (:foreground "royal blue" :underline t))))
+'(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+'(org-property-value ((t (:inherit fixed-pitch))) t)
+'(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+'(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+'(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+'(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
 
 ; Allow some things that emacs would otherwise confirm.
 (put 'eval-expression  'disabled nil)
@@ -425,18 +425,17 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'set-goal-column  'disabled nil)
 
- (setq inhibit-startup-message t)
+(setq inhibit-startup-message t)
 
 (defun my-startup-layout ()
  (interactive)
  (delete-other-windows)
  ;(split-window-horizontally) ;; -> |
- ;(next-multiframe-window)
- (shell)
- ;(split-window-vertically) ;;  -> --
  (next-multiframe-window)
  (view-buffer "*dashboard*")
- (treemacs)
+ ;(split-window-vertically) ;;  -> --
+ ;(next-multiframe-window)
+ ;(view-buffer "*dashboard*")
  ;(next-multiframe-window)
  ;(dired "~")
 )
@@ -452,25 +451,25 @@
      (my-startup-layout )
  )
 
- (require 'ispell)
+(require 'ispell)
 
- (add-to-list 'exec-path "/usr/local/bin/hunspell")
- (setq ispell-program-name "/usr/local/bin/hunspell")
- 
- (setq ispell-local-dictionary "en_US")
+(add-to-list 'exec-path "/usr/local/bin/hunspell")
+(setq ispell-program-name "/usr/local/bin/hunspell")
 
- (add-to-list
-  'ispell-local-dictionary-alist
-  '(("en_US" "[[:alpha:]]" "[^[:alpha]]" "[0-9']" t
-     ("-d" "en_US") nil utf-8)))
+(setq ispell-local-dictionary "en_US")
 
- (when (string-equal system-type "darwin") ; There is no problem on Linux
-   ;; Dictionary file name
-   (setenv "DICTIONARY" "en_US"))
+(add-to-list
+ 'ispell-local-dictionary-alist
+ '(("en_US" "[[:alpha:]]" "[^[:alpha]]" "[0-9']" t
+    ("-d" "en_US") nil utf-8)))
 
- (global-set-key (kbd "<C-c w>") 'ispell-word)
- (global-set-key (kbd "<C-n f>") 'helm-flyspell-correct)
- ;(global-set-key (kbd "<C-f4>") 'flyspell-correct-word-generic)
+(when (string-equal system-type "darwin") ; There is no problem on Linux
+  ;; Dictionary file name
+  (setenv "DICTIONARY" "en_US"))
+
+(global-set-key (kbd "<C-c w>") 'ispell-word)
+(global-set-key (kbd "<C-n f>") 'helm-flyspell-correct)
+;(global-set-key (kbd "<C-f4>") 'flyspell-correct-word-generic)
 
 ;(setq backup-by-copying t
 ;create-lockfiles nil
@@ -501,14 +500,14 @@
 
 (add-hook 'kill-buffer-query-functions 'dj-immortal-buffers)
 
- (set-register ?a (cons 'file "~/.authinfo.gpg"))
- (set-register ?s (cons 'file "~/.emacs.d/settings.org"))
- (set-register ?o (cons 'file "~/org/organizer.org"))
- (set-register ?b (cons 'file "~/org/clients/codigopd/blog.org"))
- (set-register ?f (cons 'file "~/org/elfeed.org"))
- (set-register ?c (cons 'file "~/org/contacts.org"))
- (set-register ?j (cons 'file "~/org/journals/djruesch.org"))
- (set-register ?n (cons 'file "~/.netrc"))
+(set-register ?a (cons 'file "~/.authinfo.gpg"))
+(set-register ?s (cons 'file "~/.emacs.d/settings.org"))
+(set-register ?o (cons 'file "~/org/organizer.org"))
+(set-register ?b (cons 'file "~/org/clients/codigopd/blog.org"))
+(set-register ?f (cons 'file "~/org/elfeed.org"))
+(set-register ?c (cons 'file "~/org/contacts.org"))
+(set-register ?j (cons 'file "~/org/journals/djruesch.org"))
+(set-register ?n (cons 'file "~/.netrc"))
 
 (defun dj/org-add-ids-to-headlines-in-file ()
   "Add ID properties to all headlines in the current file which
@@ -525,61 +524,61 @@ do not already have one."
 (setq completion-ignored-extensions
       (append completion-ignored-extensions '(".rtf")))
 
-  (menu-bar-mode -1)
+(menu-bar-mode -1)
 
-  (tool-bar-mode -1)
+(tool-bar-mode -1)
 
-  (scroll-bar-mode -1)
+(scroll-bar-mode -1)
 
- (blink-cursor-mode -1)
+(blink-cursor-mode -1)
 
- ;;(global-hl-line-mode 1)
- ;;(set-face-background 'hl-line "#3e4446")
- ;;(set-face-foreground 'highlight nil)
+;;(global-hl-line-mode 1)
+;;(set-face-background 'hl-line "#3e4446")
+;;(set-face-foreground 'highlight nil)
 
- (setq ring-bell-function
- (lambda ()
- (let ((orig-fg (face-foreground 'mode-line)))
- (set-face-foreground 'mode-line "#F2804F")
- (run-with-idle-timer 0.1 nil
- (lambda (fg) (set-face-foreground 'mode-line fg))
- orig-fg))))
+(setq ring-bell-function
+(lambda ()
+(let ((orig-fg (face-foreground 'mode-line)))
+(set-face-foreground 'mode-line "#F2804F")
+(run-with-idle-timer 0.1 nil
+(lambda (fg) (set-face-foreground 'mode-line fg))
+orig-fg))))
 
- (setq vc-follow-symlinks t)
+(setq vc-follow-symlinks t)
 
- (prefer-coding-system       'utf-8)
- (set-default-coding-systems 'utf-8)
- (set-terminal-coding-system 'utf-8)
- (set-keyboard-coding-system 'utf-8)
- (set-language-environment 'utf-8)
+(prefer-coding-system       'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-language-environment 'utf-8)
 
- (setq org-export-coding-system 'utf-8)
- (set-charset-priority 'unicode)
+(setq org-export-coding-system 'utf-8)
+(set-charset-priority 'unicode)
 
- (setq buffer-file-coding-system 'utf-8
-       x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
- ;; MS Windows clipboard is UTF-16LE
- (when (eq system-type 'windows-nt)
-   (set-clipboard-coding-system 'utf-16le-dos))
+(setq buffer-file-coding-system 'utf-8
+      x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+;; MS Windows clipboard is UTF-16LE
+(when (eq system-type 'windows-nt)
+  (set-clipboard-coding-system 'utf-16le-dos))
 
- (setq browse-url-browser-function 'browse-url-generic)
- (setq browse-url-generic-program "/Applications/qutebrowser.app/Contents/MacOS/qutebrowser")
+(setq browse-url-browser-function 'browse-url-generic)
+(setq browse-url-generic-program "/Applications/qutebrowser.app/Contents/MacOS/qutebrowser")
 
- ;; Change "yes or no" to "y or n"
- (fset 'yes-or-no-p 'y-or-n-p)
+;; Change "yes or no" to "y or n"
+(fset 'yes-or-no-p 'y-or-n-p)
 
- ;; Don't ask for confirmation for "dangerous" commands
- (put 'erase-buffer 'disabled nil)
- (put 'narrow-to-page 'disabled nil)
- (put 'upcase-region 'disabled nil)
- (put 'narrow-to-region 'disabled nil)
- (put 'downcase-region 'disabled nil)
- (put 'scroll-left 'disabled nil)
- (put 'scroll-right 'disabled nil)
- (put 'set-goal-column 'disabled nil)
+;; Don't ask for confirmation for "dangerous" commands
+(put 'erase-buffer 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
+(put 'upcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'scroll-left 'disabled nil)
+(put 'scroll-right 'disabled nil)
+(put 'set-goal-column 'disabled nil)
 
- ;; large file warning
- (setq large-file-warning-threshold (* 15 1024 1024))
+;; large file warning
+(setq large-file-warning-threshold (* 15 1024 1024))
 
 (server-start)
 ;(require 'server)
@@ -607,96 +606,96 @@ do not already have one."
   (load-theme 'monokai t)
   )
 
- (use-package evil
-   :disabled
-   :ensure t
-   :defer .1 ;; don't block emacs when starting, load evil immediately after startup
-   :init
-   (setq evil-want-keybinding nil)
-   (setq evil-want-integration nil) ;; required by evil-collection
-   (setq evil-search-module 'evil-search)
-   (setq evil-ex-complete-emacs-commands nil)
-   (setq evil-vsplit-window-right t) ;; like vim's 'splitright'
-   (setq evil-split-window-below t) ;; like vim's 'splitbelow'
-   (setq evil-shift-round nil)
-   (setq evil-want-C-u-scroll t)
-   :config
-   (evil-mode)
+(use-package evil
+  :disabled
+  :ensure t
+  :defer .1 ;; don't block emacs when starting, load evil immediately after startup
+  :init
+  (setq evil-want-keybinding nil)
+  (setq evil-want-integration nil) ;; required by evil-collection
+  (setq evil-search-module 'evil-search)
+  (setq evil-ex-complete-emacs-commands nil)
+  (setq evil-vsplit-window-right t) ;; like vim's 'splitright'
+  (setq evil-split-window-below t) ;; like vim's 'splitbelow'
+  (setq evil-shift-round nil)
+  (setq evil-want-C-u-scroll t)
+  :config
+  (evil-mode)
 
-   ;; vim-like keybindings everywhere in emacs
-   (use-package evil-collection
-     :after evil
-     :ensure t
-     :custom (evil-collection-setup-minibuffer t)
-     :init
-     (evil-collection-init))
+  ;; vim-like keybindings everywhere in emacs
+  (use-package evil-collection
+    :after evil
+    :ensure t
+    :custom (evil-collection-setup-minibuffer t)
+    :init
+    (evil-collection-init))
 
-   ;; gl and gL operators, like vim-lion
-   (use-package evil-lion
-     :ensure t
-     :bind (:map evil-normal-state-map
-                 ("g l " . evil-lion-left)
-                 ("g L " . evil-lion-right)
-                 :map evil-visual-state-map
-                 ("g l " . evil-lion-left)
-                 ("g L " . evil-lion-right)))
+  ;; gl and gL operators, like vim-lion
+  (use-package evil-lion
+    :ensure t
+    :bind (:map evil-normal-state-map
+                ("g l " . evil-lion-left)
+                ("g L " . evil-lion-right)
+                :map evil-visual-state-map
+                ("g l " . evil-lion-left)
+                ("g L " . evil-lion-right)))
 
-   ;; gc operator, like vim-commentary
-   (use-package evil-commentary
-     :ensure t
-     :bind (:map evil-normal-state-map
-                 ("gc" . evil-commentary)))
+  ;; gc operator, like vim-commentary
+  (use-package evil-commentary
+    :ensure t
+    :bind (:map evil-normal-state-map
+                ("gc" . evil-commentary)))
 
-   ;; gx operator, like vim-exchange
-   ;; NOTE using cx like vim-exchange is possible but not as straightforward
-   (use-package evil-exchange
-     :ensure t
-     :bind (:map evil-normal-state-map
-                 ("gx" . evil-exchange)
-                 ("gX" . evil-exchange-cancel)))
+  ;; gx operator, like vim-exchange
+  ;; NOTE using cx like vim-exchange is possible but not as straightforward
+  (use-package evil-exchange
+    :ensure t
+    :bind (:map evil-normal-state-map
+                ("gx" . evil-exchange)
+                ("gX" . evil-exchange-cancel)))
 
-   ;; gr operator, like vim's ReplaceWithRegister
-   (use-package evil-replace-with-register
-     :ensure t
-     :bind (:map evil-normal-state-map
-                 ("gr" . evil-replace-with-register)
-                 :map evil-visual-state-map
-                 ("gr" . evil-replace-with-register)))
+  ;; gr operator, like vim's ReplaceWithRegister
+  (use-package evil-replace-with-register
+    :ensure t
+    :bind (:map evil-normal-state-map
+                ("gr" . evil-replace-with-register)
+                :map evil-visual-state-map
+                ("gr" . evil-replace-with-register)))
 
-   ;; * operator in vusual mode
-   (use-package evil-visualstar
-     :ensure t
-     :bind (:map evil-visual-state-map
-                 ("*" . evil-visualstar/begin-search-forward)
-                 ("#" . evil-visualstar/begin-search-backward)))
+  ;; * operator in vusual mode
+  (use-package evil-visualstar
+    :ensure t
+    :bind (:map evil-visual-state-map
+                ("*" . evil-visualstar/begin-search-forward)
+                ("#" . evil-visualstar/begin-search-backward)))
 
-   ;; ex commands, which a vim user is likely to be familiar with
-   (use-package evil-expat
-     :ensure t
-     )
+  ;; ex commands, which a vim user is likely to be familiar with
+  (use-package evil-expat
+    :ensure t
+    )
 
-   ;; visual hints while editing
-   (use-package evil-goggles
-     :ensure t
-     :config
-     (evil-goggles-use-diff-faces)
-     (evil-goggles-mode))
+  ;; visual hints while editing
+  (use-package evil-goggles
+    :ensure t
+    :config
+    (evil-goggles-use-diff-faces)
+    (evil-goggles-mode))
 
-   ;; like vim-surround
-   (use-package evil-surround
-     :ensure t
-     :commands
-     (evil-surround-edit
-      evil-Surround-edit
-      evil-surround-region
-      evil-Surround-region)
-     :init
-     (evil-define-key 'operator global-map "s" 'evil-surround-edit)
-     (evil-define-key 'operator global-map "S" 'evil-Surround-edit)
-     (evil-define-key 'visual global-map "S" 'evil-surround-region)
-     (evil-define-key 'visual global-map "gS" 'evil-Surround-region))
+  ;; like vim-surround
+  (use-package evil-surround
+    :ensure t
+    :commands
+    (evil-surround-edit
+     evil-Surround-edit
+     evil-surround-region
+     evil-Surround-region)
+    :init
+    (evil-define-key 'operator global-map "s" 'evil-surround-edit)
+    (evil-define-key 'operator global-map "S" 'evil-Surround-edit)
+    (evil-define-key 'visual global-map "S" 'evil-surround-region)
+    (evil-define-key 'visual global-map "gS" 'evil-Surround-region))
 
-   (message "Loading evil-mode...done"))
+  (message "Loading evil-mode...done"))
 
 (require 'epa-file)
 (custom-set-variables '(epg-gpg-program  "/usr/local/bin/gpg"))
@@ -795,39 +794,39 @@ do not already have one."
   :ensure t
 )
 
- (defmacro toggle-setting-string (setting)
-   `(if (and (boundp ',setting) ,setting) '[x] '[_]))
+(defmacro toggle-setting-string (setting)
+  `(if (and (boundp ',setting) ,setting) '[x] '[_]))
 
- (bind-key "C-x t"
-  (defhydra hydra-toggle (:color amaranth)
+(bind-key "C-x t"
+ (defhydra hydra-toggle (:color amaranth)
+   "
+    _c_ column-number : %(toggle-setting-string column-number-mode)  _b_ orgtbl-mode    : %(toggle-setting-string orgtbl-mode)  _x_/_X_ trans          : %(identity dj/transparency)
+    _e_ debug-on-error: %(toggle-setting-string debug-on-error)  _s_ orgstruct-mode : %(toggle-setting-string orgstruct-mode)  _m_   hide mode-line : %(toggle-setting-string dj/hide-mode-line-mode)
+    _u_ debug-on-quit : %(toggle-setting-string debug-on-quit)  _h_ diff-hl-mode   : %(toggle-setting-string diff-hl-mode)  _p_   parenthisis : %(toggle-setting-string show-paren-mode)
+    _f_ auto-fill     : %(toggle-setting-string auto-fill-function)  _B_ battery-mode   : %(toggle-setting-string display-battery-mode)
+    _t_ truncate-lines: %(toggle-setting-string truncate-lines)  _l_ highlight-line : %(toggle-setting-string hl-line-mode)
+    _r_ read-only     : %(toggle-setting-string buffer-read-only)  _n_ line-numbers   : %(toggle-setting-string linum-mode)
+    _w_ whitespace    : %(toggle-setting-string whitespace-mode)  _N_ relative lines : %(if (eq linum-format 'linum-relative) '[x] '[_])
     "
-     _c_ column-number : %(toggle-setting-string column-number-mode)  _b_ orgtbl-mode    : %(toggle-setting-string orgtbl-mode)  _x_/_X_ trans          : %(identity dj/transparency)
-     _e_ debug-on-error: %(toggle-setting-string debug-on-error)  _s_ orgstruct-mode : %(toggle-setting-string orgstruct-mode)  _m_   hide mode-line : %(toggle-setting-string dj/hide-mode-line-mode)
-     _u_ debug-on-quit : %(toggle-setting-string debug-on-quit)  _h_ diff-hl-mode   : %(toggle-setting-string diff-hl-mode)  _p_   parenthisis : %(toggle-setting-string show-paren-mode)
-     _f_ auto-fill     : %(toggle-setting-string auto-fill-function)  _B_ battery-mode   : %(toggle-setting-string display-battery-mode)
-     _t_ truncate-lines: %(toggle-setting-string truncate-lines)  _l_ highlight-line : %(toggle-setting-string hl-line-mode)
-     _r_ read-only     : %(toggle-setting-string buffer-read-only)  _n_ line-numbers   : %(toggle-setting-string linum-mode)
-     _w_ whitespace    : %(toggle-setting-string whitespace-mode)  _N_ relative lines : %(if (eq linum-format 'linum-relative) '[x] '[_])
-     "
-    ("c" column-number-mode nil)
-    ("e" toggle-debug-on-error nil)
-    ("u" toggle-debug-on-quit nil)
-    ("f" auto-fill-mode nil)
-    ("t" toggle-truncate-lines nil)
-    ("r" dired-toggle-read-only nil)
-    ("w" whitespace-mode nil)
-    ("b" orgtbl-mode nil)
-    ("s" orgstruct-mode nil)
-    ("x" dj/transparency-next nil)
-    ("B" display-battery-mode nil)
-    ("X" dj/transparency-previous nil)
-    ("h" diff-hl-mode nil)
-    ("p" show-paren-mode nil)
-    ("l" hl-line-mode nil)
-    ("n" linum-mode nil)
-    ("N" linum-relative-toggle nil)
-    ("m" dj/hide-mode-line-mode nil)
-    ("q" nil)))
+   ("c" column-number-mode nil)
+   ("e" toggle-debug-on-error nil)
+   ("u" toggle-debug-on-quit nil)
+   ("f" auto-fill-mode nil)
+   ("t" toggle-truncate-lines nil)
+   ("r" dired-toggle-read-only nil)
+   ("w" whitespace-mode nil)
+   ("b" orgtbl-mode nil)
+   ("s" orgstruct-mode nil)
+   ("x" dj/transparency-next nil)
+   ("B" display-battery-mode nil)
+   ("X" dj/transparency-previous nil)
+   ("h" diff-hl-mode nil)
+   ("p" show-paren-mode nil)
+   ("l" hl-line-mode nil)
+   ("n" linum-mode nil)
+   ("N" linum-relative-toggle nil)
+   ("m" dj/hide-mode-line-mode nil)
+   ("q" nil)))
 
 (use-package helpful
   :ensure t
@@ -836,86 +835,86 @@ do not already have one."
   ("C-h x" . helpful-command)
   ("C-h z" . helpful-macro))
 
- (use-package info+
- )
+(use-package info+
+)
 
- (use-package projectile
-   :ensure t
-   :bind
-   ("C-c p" . projectile-command-map)
-   ("C-x w" . hydra-projectile-other-window/body)
-   ("C-c C-p" . hydra-projectile/body)
-   :config
-  
-   (use-package counsel-projectile
-     :ensure t
-   )
+(use-package projectile
+  :ensure t
+  :bind
+  ("C-c p" . projectile-command-map)
+  ("C-x w" . hydra-projectile-other-window/body)
+  ("C-c C-p" . hydra-projectile/body)
+  :config
 
-   (when (eq system-type 'windows-nt)
-     (setq projectile-indexing-method 'native))
-   (setq projectile-enable-caching t
-	 projectile-require-project-root t
-	 projectile-mode-line '(:eval (format " 🛠[%s]" (projectile-project-name)))
-	 projectile-completion-system 'default)
-   (projectile-mode)
+  (use-package counsel-projectile
+    :ensure t
+  )
 
-   (defhydra hydra-projectile-other-window (:color teal)
-     "projectile-other-window"
-     ("f"  projectile-find-file-other-window        "file")
-     ("g"  projectile-find-file-dwim-other-window   "file dwim")
-     ("d"  projectile-find-dir-other-window         "dir")
-     ("b"  projectile-switch-to-buffer-other-window "buffer")
-     ("q"  nil                                      "cancel" :color blue))
-   (defhydra hydra-projectile (:color teal :hint nil)
-     "
-  PROJECTILE: %(projectile-project-root)
+  (when (eq system-type 'windows-nt)
+    (setq projectile-indexing-method 'native))
+  (setq projectile-enable-caching t
+	projectile-require-project-root t
+	projectile-mode-line '(:eval (format " 🛠[%s]" (projectile-project-name)))
+	projectile-completion-system 'default)
+  (projectile-mode)
 
-  Find File            Search/Tags          Buffers                Cache
-   ------------------------------------------------------------------------------------------
-   _C-f_: file            _a_: ag                _i_: Ibuffer           _c_: cache clear
-    _ff_: file dwim       _g_: update gtags      _b_: switch to buffer  _x_: remove known project
-    _fd_: file curr dir   _o_: multi-occur     _C-k_: Kill all buffers  _X_: cleanup non-existing
-     _r_: recent file                                               ^^^^_z_: cache current
-     _d_: dir
+  (defhydra hydra-projectile-other-window (:color teal)
+    "projectile-other-window"
+    ("f"  projectile-find-file-other-window        "file")
+    ("g"  projectile-find-file-dwim-other-window   "file dwim")
+    ("d"  projectile-find-dir-other-window         "dir")
+    ("b"  projectile-switch-to-buffer-other-window "buffer")
+    ("q"  nil                                      "cancel" :color blue))
+  (defhydra hydra-projectile (:color teal :hint nil)
+    "
+ PROJECTILE: %(projectile-project-root)
 
-   "
-     ("a"   counsel-projectile-ag)
-     ("b"   projectile-switch-to-buffer)
-     ("c"   projectile-invalidate-cache)
-     ("d"   projectile-find-dir)
-     ("C-f" projectile-find-file)
-     ("ff"  projectile-find-file-dwim)
-     ("fd"  projectile-find-file-in-directory)
-     ("g"   ggtags-update-tags)
-     ("C-g" ggtags-update-tags)
-     ("i"   projectile-ibuffer)
-     ("K"   projectile-kill-buffers)
-     ("C-k" projectile-kill-buffers)
-     ("m"   projectile-multi-occur)
-     ("o"   projectile-multi-occur)
-     ("C-p" projectile-switch-project "switch project")
-     ("p"   projectile-switch-project)
-     ("s"   projectile-switch-project)
-     ("r"   projectile-recentf)
-     ("x"   projectile-remove-known-project)
-     ("X"   projectile-cleanup-known-projects)
-     ("z"   projectile-cache-current-file)
-     ("`"   hydra-projectile-other-window/body "other window")
-     ("q"   nil "cancel" :color blue)))
+ Find File            Search/Tags          Buffers                Cache
+  ------------------------------------------------------------------------------------------
+  _C-f_: file            _a_: ag                _i_: Ibuffer           _c_: cache clear
+   _ff_: file dwim       _g_: update gtags      _b_: switch to buffer  _x_: remove known project
+   _fd_: file curr dir   _o_: multi-occur     _C-k_: Kill all buffers  _X_: cleanup non-existing
+    _r_: recent file                                               ^^^^_z_: cache current
+    _d_: dir
+
+  "
+    ("a"   counsel-projectile-ag)
+    ("b"   projectile-switch-to-buffer)
+    ("c"   projectile-invalidate-cache)
+    ("d"   projectile-find-dir)
+    ("C-f" projectile-find-file)
+    ("ff"  projectile-find-file-dwim)
+    ("fd"  projectile-find-file-in-directory)
+    ("g"   ggtags-update-tags)
+    ("C-g" ggtags-update-tags)
+    ("i"   projectile-ibuffer)
+    ("K"   projectile-kill-buffers)
+    ("C-k" projectile-kill-buffers)
+    ("m"   projectile-multi-occur)
+    ("o"   projectile-multi-occur)
+    ("C-p" projectile-switch-project "switch project")
+    ("p"   projectile-switch-project)
+    ("s"   projectile-switch-project)
+    ("r"   projectile-recentf)
+    ("x"   projectile-remove-known-project)
+    ("X"   projectile-cleanup-known-projects)
+    ("z"   projectile-cache-current-file)
+    ("`"   hydra-projectile-other-window/body "other window")
+    ("q"   nil "cancel" :color blue)))
 
 (use-package perspective
   :ensure t
   :config
   (persp-mode))
 
- (use-package all-the-icons
-   :ensure t
-   )
+(use-package all-the-icons
+  :ensure t
+  )
 
- (use-package all-the-icons-dired
-   :ensure t
-   :commands (all-the-icons-dired-mode)
-   :config (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+(use-package all-the-icons-dired
+  :ensure t
+  :commands (all-the-icons-dired-mode)
+  :config (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
 
 (use-package company
   ;:diminish
@@ -1072,7 +1071,7 @@ do not already have one."
   ;; Enable the netrc authentication function for &biblbee channels.
   (add-hook 'erc-join-hook 'bitlbee-netrc-identify)
 
- (use-package elfeed
+(use-package elfeed
    :ensure t
    :bind
    ("C-c f" . 'elfeed)
@@ -1102,167 +1101,167 @@ do not already have one."
  ;;(define-key elfeed-search-mode-map (kbd "v") 'elfeed-view-mpv)
 )
 
-   (use-package elfeed-org
-   :ensure t
-   :config (setq rmh-elfeed-org-files (list "~/org/elfeed.org"))
-   )
+(use-package elfeed-org
+:ensure t
+:config (setq rmh-elfeed-org-files (list "~/org/elfeed.org"))
+)
 
- (use-package emms
-   :config
-   ;(require 'emms-setup)
-   (emms-all)
-   (emms-default-players)
-   (setq emms-source-file-default-directory "~/Music/new/")
-   (setq emms-playlist-buffer-name "*Music*")
-   (setq emms-info-asynchronously t)
-   (require 'emms-info-libtag) ;;; load functions that will talk to emms-print-metadata which in turn talks to libtag and gets metadata
-   (setq emms-info-functions '(emms-info-libtag)) ;;; make sure libtag is the only thing delivering metadata
-   (require 'emms-mode-line)
-   (emms-mode-line 1)
-   (require 'emms-playing-time)
-   (emms-playing-time 1)
-   (require 'emms-player-simple)
+(use-package emms
+  :config
+  ;(require 'emms-setup)
+  (emms-all)
+  (emms-default-players)
+  (setq emms-source-file-default-directory "~/Music/new/")
+  (setq emms-playlist-buffer-name "*Music*")
+  (setq emms-info-asynchronously t)
+  (require 'emms-info-libtag) ;;; load functions that will talk to emms-print-metadata which in turn talks to libtag and gets metadata
+  (setq emms-info-functions '(emms-info-libtag)) ;;; make sure libtag is the only thing delivering metadata
+  (require 'emms-mode-line)
+  (emms-mode-line 1)
+  (require 'emms-playing-time)
+  (emms-playing-time 1)
+  (require 'emms-player-simple)
 
-   (define-emms-simple-player afplay '(file)
-     (regexp-opt '(".mp3" ".m4a" ".aac"))
-     "afplay")
-   (setq emms-player-list `(,emms-player-afplay))
+  (define-emms-simple-player afplay '(file)
+    (regexp-opt '(".mp3" ".m4a" ".aac"))
+    "afplay")
+  (setq emms-player-list `(,emms-player-afplay))
 
-   (global-set-key (kbd "C-c e t") 'emms-play-directory-tree)
-   (global-set-key (kbd "C-c e a") 'emms-add-directory-tree)
-   (global-set-key (kbd "C-c e f") 'emms-play-file)
+  (global-set-key (kbd "C-c e t") 'emms-play-directory-tree)
+  (global-set-key (kbd "C-c e a") 'emms-add-directory-tree)
+  (global-set-key (kbd "C-c e f") 'emms-play-file)
 
-   (global-set-key (kbd "C-c e x") 'emms-start)
-   (global-set-key (kbd "C-c e X") 'emms-stop)
-   (global-set-key (kbd "C-c e n") 'emms-next)
-   (global-set-key (kbd "C-c e p") 'emms-previous)
-   (global-set-key (kbd "C-c e SPC") 'emms-pause)
+  (global-set-key (kbd "C-c e x") 'emms-start)
+  (global-set-key (kbd "C-c e X") 'emms-stop)
+  (global-set-key (kbd "C-c e n") 'emms-next)
+  (global-set-key (kbd "C-c e p") 'emms-previous)
+  (global-set-key (kbd "C-c e SPC") 'emms-pause)
 
-   (global-set-key (kbd "C-c e h") 'emms-shuffle)
- )
+  (global-set-key (kbd "C-c e h") 'emms-shuffle)
+)
 
- (use-package mu4e
- :bind
- ("C-c m" . 'mu4e)
- :config
- ;; mu path
- (setq mu4e-mu-binary "/usr/local/bin/mu")
- ;; use mu4e for e-mail in emacs
- (setq mail-user-agent 'mu4e-user-agent)
+(use-package mu4e
+:bind
+("C-c m" . 'mu4e)
+:config
+;; mu path
+(setq mu4e-mu-binary "/usr/local/bin/mu")
+;; use mu4e for e-mail in emacs
+(setq mail-user-agent 'mu4e-user-agent)
 
- (setq mu4e-refile-folder "/[Gmail]/All Mail")
- (setq mu4e-drafts-folder "/[Gmail].Drafts")
- (setq mu4e-sent-folder   "/[Gmail].Sent Mail")
- (setq mu4e-trash-folder  "/[Gmail].Trash")
+(setq mu4e-refile-folder "/[Gmail]/All Mail")
+(setq mu4e-drafts-folder "/[Gmail].Drafts")
+(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
+(setq mu4e-trash-folder  "/[Gmail].Trash")
 
- ;; don't save message to Sent Messages, Gmail/IMAP takes care of this
- (setq mu4e-sent-messages-behavior 'delete)
+;; don't save message to Sent Messages, Gmail/IMAP takes care of this
+(setq mu4e-sent-messages-behavior 'delete)
 
- ;; (See the documentation for `mu4e-sent-messages-behavior' if you have
- ;; additional non-Gmail addresses and want assign them different
- ;; behavior.)
+;; (See the documentation for `mu4e-sent-messages-behavior' if you have
+;; additional non-Gmail addresses and want assign them different
+;; behavior.)
 
- ;; setup some handy shortcuts
- ;; you can quickly switch to your Inbox -- press ``ji''
- ;; then, when you want archive some messages, move them to
- ;; the 'All Mail' folder by pressing ``ma''.
+;; setup some handy shortcuts
+;; you can quickly switch to your Inbox -- press ``ji''
+;; then, when you want archive some messages, move them to
+;; the 'All Mail' folder by pressing ``ma''.
 
- ;;(setq mu4e-maildir-shortcuts
- ;;    '( (:maildir "/[Gmail].Inbox"      :key ?i)
- ;;       (:maildir "/[Gmail].Sent Mail"  :key ?s)
- ;;       (:maildir "/[Gmail].Trash"      :key ?t)
- ;;       (:maildir "/[Gmail].All Mail"   :key ?a)))
+;;(setq mu4e-maildir-shortcuts
+;;    '( (:maildir "/[Gmail].Inbox"      :key ?i)
+;;       (:maildir "/[Gmail].Sent Mail"  :key ?s)
+;;       (:maildir "/[Gmail].Trash"      :key ?t)
+;;       (:maildir "/[Gmail].All Mail"   :key ?a)))
 
 
- (setq mu4e-headers-fields
-     '( (:date          .  25)    ;; alternatively, use :human-date
-	(:flags         .   6)
-	(:from          .  22)
-	(:subject       .  nil))) ;; alternatively, use :thread-subject
+(setq mu4e-headers-fields
+    '( (:date          .  25)    ;; alternatively, use :human-date
+       (:flags         .   6)
+       (:from          .  22)
+       (:subject       .  nil))) ;; alternatively, use :thread-subject
 
- (setq mu4e-attachment-dir "~/Downloads")
- (setq mu4e-use-fancy-chars t)
- (setq mu4e-view-show-addresses t)
- (setq mu4e-view-show-images t)
+(setq mu4e-attachment-dir "~/Downloads")
+(setq mu4e-use-fancy-chars t)
+(setq mu4e-view-show-addresses t)
+(setq mu4e-view-show-images t)
 
- ;; allow for updating mail using 'U' in the main view:
- (setq mu4e-get-mail-command "/usr/local/bin/offlineimap")
+;; allow for updating mail using 'U' in the main view:
+(setq mu4e-get-mail-command "/usr/local/bin/offlineimap")
 
- ;; something about ourselves
- (setq mu4e-compose-reply-to-address "djruesch@gmail.com")
+;; something about ourselves
+(setq mu4e-compose-reply-to-address "djruesch@gmail.com")
 
- (setq mu4e-compose-signature "https://codigopd.com\n")
+(setq mu4e-compose-signature "https://codigopd.com\n")
 
- ;; sending mail -- replace USERNAME with your gmail username
- ;; also, make sure the gnutls command line utils are installed
- ;; package 'gnutls-bin' in Debian/Ubuntu
+;; sending mail -- replace USERNAME with your gmail username
+;; also, make sure the gnutls command line utils are installed
+;; package 'gnutls-bin' in Debian/Ubuntu
 
- (require 'smtpmail)
- (setq message-send-mail-function 'smtpmail-send-it
-    starttls-use-gnutls t
-    smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-    smtpmail-auth-credentials
-      '(("smtp.gmail.com" 587 "djruesch@gmail.com" nil))
-    smtpmail-default-smtp-server "smtp.gmail.com"
-    smtpmail-smtp-server "smtp.gmail.com"
-    smtpmail-smtp-service 587)
+(require 'smtpmail)
+(setq message-send-mail-function 'smtpmail-send-it
+   starttls-use-gnutls t
+   smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+   smtpmail-auth-credentials
+     '(("smtp.gmail.com" 587 "djruesch@gmail.com" nil))
+   smtpmail-default-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-service 587)
 
- ;; don't keep message buffers around
- (setq message-kill-buffer-on-exit t)
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
 
- )
+)
 
- (use-package dashboard 
-   :ensure t
-   :config
+(use-package dashboard 
+  :ensure t
+  :config
 
-   ;(dashboard-setup-startup-hook)
+  ;(dashboard-setup-startup-hook)
 
-   ;; Set the title
-   (setq dashboard-banner-logo-title "Welcome to the CodigoPD Dashboard")
-   ;; Set the banner
-   (setq dashboard-startup-banner "/Users/djruesch/Proyectos/codigopd/website/static/img/logos/codigopd_logo-506x171.png")
+  ;; Set the title
+  (setq dashboard-banner-logo-title "Welcome to the CodigoPD Dashboard")
+  ;; Set the banner
+  (setq dashboard-startup-banner "/Users/djruesch/Proyectos/codigopd/website/static/img/logos/codigopd_logo-506x171.png")
 
-   ;; Content is not centered by default. To center, set
-   (setq dashboard-center-content t)
+  ;; Content is not centered by default. To center, set
+  (setq dashboard-center-content t)
 
-   ;; To disable shortcut "jump" indicators for each section, set
-   (setq dashboard-show-shortcuts t)
+  ;; To disable shortcut "jump" indicators for each section, set
+  (setq dashboard-show-shortcuts t)
 
-   (setq dashboard-items '((recents  . 10)
-   (bookmarks . 25)
-   (projects . 15)
-   (agenda . 15)
-   (registers . 25)))
+  (setq dashboard-items '((recents  . 10)
+  (bookmarks . 25)
+  (projects . 15)
+  (agenda . 15)
+  (registers . 25)))
 
-   (setq dashboard-set-heading-icons t)
-   (setq dashboard-set-file-icons t)
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
 
-   (setq dashboard-set-navigator t)
+  (setq dashboard-set-navigator t)
 
-   (setq dashboard-set-init-info t)
+  (setq dashboard-set-init-info t)
 
-   ;;(setq dashboard-set-footer t)
+  ;;(setq dashboard-set-footer t)
 
-   ;;(add-to-list 'dashboard-items '(agenda) t)
+  ;;(add-to-list 'dashboard-items '(agenda) t)
 
-   (setq show-week-agenda-p t)
+  (setq show-week-agenda-p t)
 
-   (setq dashboard-org-agenda-categories '("DJRuesch" "CodigoPD"))
+  (setq dashboard-org-agenda-categories '("DJRuesch" "CodigoPD"))
 
-   (setq dashboard-footer-messages '("Dashboard is pretty cool!"))
-   (setq dashboard-footer-icon (all-the-icons-octicon "dashboard"
-                                                   :height 1.1
-                                                   :v-adjust -0.05
-                                                   :face 'font-lock-keyword-face))
- )
+  (setq dashboard-footer-messages '("Dashboard is pretty cool!"))
+  (setq dashboard-footer-icon (all-the-icons-octicon "dashboard"
+                                                  :height 1.1
+                                                  :v-adjust -0.05
+                                                  :face 'font-lock-keyword-face))
+)
 
- (use-package which-key
-   :ensure t
-   :init
-   (which-key-mode)
-   (which-key-setup-side-window-right-bottom)
-   (setq which-key-max-description-length 60))
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode)
+  (which-key-setup-side-window-right-bottom)
+  (setq which-key-max-description-length 60))
 
 (use-package magit
   :ensure t
@@ -1368,7 +1367,7 @@ do not already have one."
     :docstring "Search: youtube.com")
 )
 
- (setq-default abbrev-mode 1)
+(setq-default abbrev-mode 1)
 
  (use-package yasnippet
    :ensure t
@@ -1483,7 +1482,7 @@ do not already have one."
   :ensure t
   :config (treemacs-set-scope-type 'Perspectives))
 
- (use-package org
+(use-package org
   :ensure t
   ;;:ensure org-plus-contrib
   :load-path ("~/.emacs.d/site-lisp")
@@ -1567,7 +1566,7 @@ org-priority-lowest "C")
 
 )
 
-     ;; Agenda
+;; Agenda
 ;     (setq org-agenda-files (quote ("/Users/djruesch/org/inbox.org")))
      
 ;     (setq org-agenda-files (append '(file-expand-wildcards "~/org/journals/*.org")
@@ -1587,35 +1586,35 @@ org-priority-lowest "C")
 
 (setq org-agenda-skip-unavailable-files t)
 
-  (use-package org-super-agenda
-    :ensure t
-    :requires (org-super-agenda-mode)
-    :config
-    (let ((org-super-agenda-groups
-       '((:log t)  ; Automatically named "Log"
-         (:auto-category t)
-         (:name "Schedule"
-                :time-grid t)
-         (:name "Today"
-                :scheduled today)
-         (:habit t)
-         (:name "Due today"
-                :deadline today)
-         (:name "Overdue"
-                :deadline past)
-         (:name "Due soon"
-                :deadline future)
-         (:name "Unimportant"
-                :todo ("SOMEDAY" "MAYBE" "CHECK" "TO-READ" "TO-WATCH")
-                :order 100)
-         (:name "Waiting..."
-                :todo "WAITING"
-                :order 98)
-         (:name "Scheduled earlier"
-                :scheduled past))))
-  (org-agenda-list))
-    
-  )
+(use-package org-super-agenda
+  :ensure t
+  :requires (org-super-agenda-mode)
+  :config
+  (let ((org-super-agenda-groups
+     '((:log t)  ; Automatically named "Log"
+       (:auto-category t)
+       (:name "Schedule"
+              :time-grid t)
+       (:name "Today"
+              :scheduled today)
+       (:habit t)
+       (:name "Due today"
+              :deadline today)
+       (:name "Overdue"
+              :deadline past)
+       (:name "Due soon"
+              :deadline future)
+       (:name "Unimportant"
+              :todo ("SOMEDAY" "MAYBE" "CHECK" "TO-READ" "TO-WATCH")
+              :order 100)
+       (:name "Waiting..."
+              :todo "WAITING"
+              :order 98)
+       (:name "Scheduled earlier"
+              :scheduled past))))
+(org-agenda-list))
+
+)
 
 (setq org-todo-keywords
       '(
@@ -1768,47 +1767,47 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
 
 (setq org-fast-tag-selection-single-key t)
 
- (setq org-publish-project-alist
-	`(("posts"
-           :base-directory "~/org/journals"
-           ;;:remote (git "git@github.com:jonathanabennett/jonathanabennett.github.io.git" "master")
-           ;;:source-browse-url ("Github" "https://jonathanabennett/jonathanabennett.github.io.git")
-           ;;:site-domain "https://jonathanabennett.github.io/"
-           :site-main-title "Step by Step"
-           :site-sub-title "On the Way Home"
-           :recursive t
-           :publishing-directory "~/Sites/journals/"
-           :section-numbers nil
-           :with-title t
-           :with-date t
-	   :with-toc t
-           :html-doctype "html5"
-           :html-html5-fancy t
-	   :html-head "<link rel=\"stylesheet\" href=\"../other/mystyle.css\" type=\"text/css\"/>"
-           :html-head-include-default-style t
-           :html-head-include-scripts t
-	   :html-preamble t
-           :htmlized-source t
-           :publishing-function org-html-publish-to-html)
+(setq org-publish-project-alist
+       `(("posts"
+          :base-directory "~/org/journals"
+          ;;:remote (git "git@github.com:jonathanabennett/jonathanabennett.github.io.git" "master")
+          ;;:source-browse-url ("Github" "https://jonathanabennett/jonathanabennett.github.io.git")
+          ;;:site-domain "https://jonathanabennett.github.io/"
+          :site-main-title "Step by Step"
+          :site-sub-title "On the Way Home"
+          :recursive t
+          :publishing-directory "~/Sites/journals/"
+          :section-numbers nil
+          :with-title t
+          :with-date t
+	  :with-toc t
+          :html-doctype "html5"
+          :html-html5-fancy t
+	  :html-head "<link rel=\"stylesheet\" href=\"../other/mystyle.css\" type=\"text/css\"/>"
+          :html-head-include-default-style t
+          :html-head-include-scripts t
+	  :html-preamble t
+          :htmlized-source t
+          :publishing-function org-html-publish-to-html)
 
-          ("photos"
-           :base-directory "~/org/journals/photos"
-           :base-extension "png\\|jpeg\\|jpg\\|gif\\|pdf"
-           :publishing-directory "~/Sites/photos"
-           :recursive t
-           :publishing-function org-publish-attachment)
+         ("photos"
+          :base-directory "~/org/journals/photos"
+          :base-extension "png\\|jpeg\\|jpg\\|gif\\|pdf"
+          :publishing-directory "~/Sites/photos"
+          :recursive t
+          :publishing-function org-publish-attachment)
 
-          ("static"
-           :base-directory "~/org/journals"
-           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-           :publishing-directory "~/Sites/static/journal"
-           :recursive t
-           :publishing-function org-publish-attachment)
+         ("static"
+          :base-directory "~/org/journals"
+          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+          :publishing-directory "~/Sites/static/journal"
+          :recursive t
+          :publishing-function org-publish-attachment)
 
 
-  ("journal"
-           :components ("posts" "photos" "static"))
-  ))
+ ("journal"
+          :components ("posts" "photos" "static"))
+ ))
 
 (use-package deft
       :after org
@@ -1821,77 +1820,77 @@ w" "Weekly Review" plain (file+datetree+prompt "~/org/journals/djruesch.org") (f
       (deft-default-extension "org")
       (deft-directory "~/org/brain/"))
 
-    (use-package org-roam
-      :after org
-      :ensure t
-      :delight " 𝕫"
-      :hook
-      (after-init . org-roam-mode)
-      
-      :custom
-      (org-roam-directory "~/org/brain/")
-      (org-roam-graph-executable "/usr/local/bin/dot")
-      
-      (setq org-link-file-path-type "absolute")
+(use-package org-roam
+  :after org
+  :ensure t
+  :delight " 𝕫"
+  :hook
+  (after-init . org-roam-mode)
 
-      :bind (:map org-roam-mode-map
-		  (("C-c n l" . org-roam)
-		   ("C-c n f" . org-roam-find-file)
-		   ("C-c n g" . org-roam-show-graph))
-	     :map org-mode-map
-		  (("C-c n i" . org-roam-insert))
-		  (("C-c n I" . org-roam-insert-immediate))))
+  :custom
+  (org-roam-directory "~/org/brain/")
+  (org-roam-graph-executable "/usr/local/bin/dot")
 
-   (use-package org-roam-bibtex
-     :after org-roam
-     :hook (org-roam-mode . org-roam-bibtex-mode)
-     :bind (:map org-mode-map
-            (("C-c n a" . orb-note-actions))))
+  (setq org-link-file-path-type "absolute")
 
-  (use-package org-ref
-     :after org
-     :requires (org-bibtex)
-     :config
-       (require 'org-ref)
+  :bind (:map org-roam-mode-map
+	      (("C-c n l" . org-roam)
+	       ("C-c n f" . org-roam-find-file)
+	       ("C-c n g" . org-roam-show-graph))
+	 :map org-mode-map
+	      (("C-c n i" . org-roam-insert))
+	      (("C-c n I" . org-roam-insert-immediate))))
 
-       (setq reftex-default-bibliography '("~/org/bibtex/references.bib"))
+(use-package org-roam-bibtex
+  :after org-roam
+  :hook (org-roam-mode . org-roam-bibtex-mode)
+  :bind (:map org-mode-map
+         (("C-c n a" . orb-note-actions))))
 
-       ;; see org-ref for use of these variables
-       (setq org-ref-bibliography-notes "~/org/notes.org"
-	 org-ref-default-bibliography '("~/org/bibtex/references.bib")
-	 org-ref-pdf-directory "~/org/bibtex/bibtex-pdfs/")
-     
-       (setq bibtex-completion-bibliography "~/org/bibtex/references.bib"
-	 bibtex-completion-library-path "~/org/bibtex/bibtex-pdfs"
-	 bibtex-completion-notes-path "~/org/bibtex/helm-bibtex-notes")
-     
-       ;; open pdf with system pdf viewer (works on mac)
-       (setq bibtex-completion-pdf-open-function
-       (lambda (fpath)
-	 (start-process "open" "*open*" "open" fpath)))
-     
-       (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+(use-package org-ref
+   :after org
+   :requires (org-bibtex)
+   :config
+     (require 'org-ref)
+
+     (setq reftex-default-bibliography '("~/org/bibtex/references.bib"))
+
+     ;; see org-ref for use of these variables
+     (setq org-ref-bibliography-notes "~/org/notes.org"
+       org-ref-default-bibliography '("~/org/bibtex/references.bib")
+       org-ref-pdf-directory "~/org/bibtex/bibtex-pdfs/")
+
+     (setq bibtex-completion-bibliography "~/org/bibtex/references.bib"
+       bibtex-completion-library-path "~/org/bibtex/bibtex-pdfs"
+       bibtex-completion-notes-path "~/org/bibtex/helm-bibtex-notes")
+
+     ;; open pdf with system pdf viewer (works on mac)
+     (setq bibtex-completion-pdf-open-function
+     (lambda (fpath)
+       (start-process "open" "*open*" "open" fpath)))
+
+     (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
 
 
 
-       (defun org-ref-noter-at-point ()
-	 "Open the pdf for bibtex key under point if it exists."
-	 (interactive)
-	 (let* ((results (org-ref-get-bibtex-key-and-file))
-             (key (car results))
-             (pdf-file (funcall org-ref-get-pdf-filename-function key)))
-           (if (file-exists-p pdf-file)
-               (progn
-              (find-file-other-window pdf-file)
-              (org-noter))
-          (message "no pdf found for %s" key))))
+     (defun org-ref-noter-at-point ()
+       "Open the pdf for bibtex key under point if it exists."
+       (interactive)
+       (let* ((results (org-ref-get-bibtex-key-and-file))
+           (key (car results))
+           (pdf-file (funcall org-ref-get-pdf-filename-function key)))
+         (if (file-exists-p pdf-file)
+             (progn
+            (find-file-other-window pdf-file)
+            (org-noter))
+        (message "no pdf found for %s" key))))
 
-       (add-to-list 'org-ref-helm-user-candidates 
-             '("Org-Noter notes" . org-ref-noter-at-point))
+     (add-to-list 'org-ref-helm-user-candidates 
+           '("Org-Noter notes" . org-ref-noter-at-point))
 
-       (setq org-ref-bibliography-notes "~/org/notes.org")
-       (setq org-ref-notes-function #'org-ref-notes-function-one-file)
-   )
+     (setq org-ref-bibliography-notes "~/org/notes.org")
+     (setq org-ref-notes-function #'org-ref-notes-function-one-file)
+ )
 
 (use-package org-noter
     :after org

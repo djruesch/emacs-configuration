@@ -527,12 +527,11 @@
  (interactive)
  (delete-other-windows)
  ;(split-window-horizontally) ;; -> |
- ;(next-multiframe-window)
- (shell)
- ;(split-window-vertically) ;;  -> --
  (next-multiframe-window)
  (view-buffer "*dashboard*")
- (treemacs)
+ ;(split-window-vertically) ;;  -> --
+ ;(next-multiframe-window)
+ ;(view-buffer "*dashboard*")
  ;(next-multiframe-window)
  ;(dired "~")
 )
